@@ -26,6 +26,7 @@
     "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.5",
     "@keyvhq/core": "^1.6.9",
     "@keyvhq/redis": "^1.6.10",
     "@react-icons/all-files": "^4.1.0",
@@ -38,6 +39,7 @@
     "isomorphic-unfetch": "^3.1.0",
     "lqip-modern": "^1.2.0",
     "next": "^12.3.1",
+    "next-export-i18n": "^2.1.0",
     "notion-client": "^6.15.6",
     "notion-types": "^6.15.6",
     "notion-utils": "^6.15.6",
