@@ -20,7 +20,6 @@ const ToggleThemeButton = () => {
   return (
     <div
       className={cs('breadcrumb', 'button', !hasMounted && styles.hidden)}
-      onClick={onToggleTheme}
     >
       <IoSunnyOutline />
     </div>
