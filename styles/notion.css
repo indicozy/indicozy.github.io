@@ -7,6 +7,11 @@
  * places to add some flare.
  */
 
+:root {
+  --bg-color: #eee !important;
+  --fg-color: #1c1917 !important;
+}
+
 .notion {
   --notion-max-width: 720px;
   --notion-header-height: 54px;
@@ -162,8 +167,7 @@
 }
 
 .notion-title {
-  display: block;
-  text-align: center;
+  @apply text-center block font-soyuz;
 }
 
 .notion-collection-row {
@@ -353,8 +357,7 @@
 }
 
 .notion-header {
-  background: hsla(0, 0%, 100%, 0.8);
-  backdrop-filter: saturate(180%) blur(16px);
+  visibility: hidden;
 }
 
 .dark-mode .notion-header {
