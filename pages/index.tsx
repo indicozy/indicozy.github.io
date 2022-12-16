@@ -44,8 +44,8 @@ export default function NotionDomainPage() {
     function transform(pt) {
       const tx = (pt.x - boundingBox.left) / boundingBox.width
       const ty = (pt.y - boundingBox.top) / boundingBox.height
-      const width = size.width * 2
-      const height = size.height * 2
+      const width = size.width * 1.4
+      const height = size.height * 1.4
       // var ar = width/height;
       //tx /= ar;
       return {
@@ -54,8 +54,8 @@ export default function NotionDomainPage() {
       }
     }
 
-    canvas.width = size.width * 2
-    canvas.height = size.height * 2
+    canvas.width = size.width * 1.4
+    canvas.height = size.height * 1.4
 
     if (streamline.current) {
       streamline.current.dispose()
