@@ -27,6 +27,11 @@ export default function NotionDomainPage() {
     const canvas = ref.current
     const ctx = canvas.getContext('2d')
 
+    let sizeMultiplier = 1
+    if (size.width < 600) {
+      sizeMultiplier = 2
+    }
+
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 
     function onPointAdded(a, b) {
@@ -44,8 +49,8 @@ export default function NotionDomainPage() {
     function transform(pt) {
       const tx = (pt.x - boundingBox.left) / boundingBox.width
       const ty = (pt.y - boundingBox.top) / boundingBox.height
-      const width = size.width * 1.4
-      const height = size.height * 1.4
+      const width = size.width * sizeMultiplier
+      const height = size.height * sizeMultiplier
       // var ar = width/height;
       //tx /= ar;
       return {
@@ -54,8 +59,8 @@ export default function NotionDomainPage() {
       }
     }
 
-    canvas.width = size.width * 1.4
-    canvas.height = size.height * 1.4
+    canvas.width = size.width * sizeMultiplier
+    canvas.height = size.height * sizeMultiplier
 
     if (streamline.current) {
       streamline.current.dispose()
