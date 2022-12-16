@@ -8,7 +8,9 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      soyuz: ['Soyuz Grotesk']
+      soyuz: ['Soyuz Grotesk'],
+      ramillas: ['TT Ramillas'],
+      ramillas_outline: ['TT Ramillas Outline']
     }
   },
   plugins: []

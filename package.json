@@ -26,6 +26,7 @@
     "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check"
   },
   "dependencies": {
+    "@anvaka/streamlines": "^1.5.0",
     "@headlessui/react": "^1.7.5",
     "@keyvhq/core": "^1.6.9",
     "@keyvhq/redis": "^1.6.10",
