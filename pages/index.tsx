@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 
 import streamlines from '@anvaka/streamlines'
@@ -85,6 +86,9 @@ export default function NotionDomainPage() {
         <br />
         <span className='font-soyuz'>{t('index.hero2')}</span>
       </h1>
+      <Link href='/notes'>
+        <a className='text-3xl'>notes</a>
+      </Link>
       <canvas ref={ref} className='fixed top-0 left-0 z-[-1]'></canvas>
     </>
   )
