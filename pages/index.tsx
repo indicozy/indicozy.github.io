@@ -81,7 +81,7 @@ export default function NotionDomainPage() {
         <meta name='description' content={t('index.meta')} />
       </Head>
       <LanguageSwitcherMenu />
-      <h1 className='text-[8rem] font-soyuz whitespace-nowrap'>
+      <h1 className='text-4xl sm:text-[8rem] font-soyuz whitespace-nowrap'>
         {t('index.hero')}
         <br />
         <span className='font-soyuz'>{t('index.hero2')}</span>
