@@ -44,8 +44,8 @@ export default function NotionDomainPage() {
     function transform(pt) {
       const tx = (pt.x - boundingBox.left) / boundingBox.width
       const ty = (pt.y - boundingBox.top) / boundingBox.height
-      const width = size.width
-      const height = size.height
+      const width = size.width * 2
+      const height = size.height * 2
       // var ar = width/height;
       //tx /= ar;
       return {
@@ -54,8 +54,8 @@ export default function NotionDomainPage() {
       }
     }
 
-    canvas.width = size.width
-    canvas.height = size.height
+    canvas.width = size.width * 2
+    canvas.height = size.height * 2
 
     if (streamline.current) {
       streamline.current.dispose()
@@ -81,7 +81,7 @@ export default function NotionDomainPage() {
         <meta name='description' content={t('index.meta')} />
       </Head>
       <LanguageSwitcherMenu />
-      <h1 className='text-4xl sm:text-[8rem] font-soyuz whitespace-nowrap'>
+      <h1 className='text-4xl leading-normal sm:text-[8rem] font-soyuz whitespace-nowrap'>
         {t('index.hero')}
         <br />
         <span className='font-soyuz'>{t('index.hero2')}</span>
@@ -89,7 +89,10 @@ export default function NotionDomainPage() {
       <Link href='/notes'>
         <a className='text-3xl'>notes</a>
       </Link>
-      <canvas ref={ref} className='fixed top-0 left-0 z-[-1]'></canvas>
+      <canvas
+        ref={ref}
+        className='fixed top-0 left-0 z-[-1] w-[100vw] h-[100vh]'
+      ></canvas>
     </>
   )
 }
