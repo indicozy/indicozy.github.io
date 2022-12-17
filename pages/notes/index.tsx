@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import { NotionPage } from '@/components/NotionPage'
+import { Badge } from '@/components/ui/badge'
 import { domain } from '@/lib/config'
 import { resolveNotionPage } from '@/lib/resolve-notion-page'
 
@@ -25,13 +26,12 @@ export default function NotionDomainPage(props) {
       block.value.properties &&
       block.value.type &&
       block.value.type === 'page' ? (
-        <div
-          key={i}
-          className='p-6 mb-4 max-w-sm rounded-lg border border-gray-200 bg-stone-50'
-        >
+        <div key={i} className='py-20 my-10 border border-b-black'>
           {block.value.properties.title ? (
             <>
-              <p className='text-2xl'>{block.value.properties.title[0][0]}</p>
+              <p className='text-2xl sm:text-6xl font-soyuz'>
+                {block.value.properties.title[0][0]}
+              </p>
               {/* <p>
                 {block.value.properties.title[0][0]
                   .toLowerCase()
@@ -49,73 +49,77 @@ export default function NotionDomainPage(props) {
             <></>
           )}
           {block.value.properties['kKTk'] ? (
-            <p>{block.value.properties['kKTk'][0][0]}</p>
+            <Badge>{block.value.properties['kKTk'][0][0]}</Badge>
           ) : (
             <></>
           )}
           {block.value.properties['ea=E'] ? (
-            <p>
-              {JSON.stringify(block.value.properties['ea=E'][0][0].split(','))}
-            </p>
+            <>
+              {block.value.properties['ea=E'][0][0].split(',').map((e, i) => (
+                <Badge key={i}> {e}</Badge>
+              ))}
+            </>
           ) : (
             <></>
           )}
           {block.value.properties['cKLX'] ? (
-            <p>{block.value.properties['cKLX'][0][0]}</p>
+            <Badge>{block.value.properties['cKLX'][0][0]}</Badge>
           ) : (
             <></>
           )}
-          {block.value.properties.title ? (
-            <a
-              href={`${block.value.properties.title[0][0]
-                .toLowerCase()
-                .replace(/[^A-Za-z0-9 ]/g, '')
-                .replaceAll(' ', '-')}
+          <div className='mt-4'>
+            {block.value.properties.title ? (
+              <a
+                href={`${block.value.properties.title[0][0]
+                  .toLowerCase()
+                  .replace(/[^A-Za-z0-9 ]/g, '')
+                  .replaceAll(' ', '-')}
                 `}
-              className='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800'
-            >
-              Read more
-              <svg
-                aria-hidden='true'
-                className='-mr-1 ml-2 w-4 h-4'
-                fill='currentColor'
-                viewBox='0 0 20 20'
-                xmlns='http://www.w3.org/2000/svg'
+                className='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800'
               >
-                <path
-                  fillRule='evenodd'
-                  d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
-                  clipRule='evenodd'
-                ></path>
-              </svg>
-            </a>
-          ) : (
-            <></>
-          )}
-          {block.value.properties['jRIm'] ? (
-            <a
-              href={`${block.value.properties['jRIm'][0][0]}
+                Read more
+                <svg
+                  aria-hidden='true'
+                  className='-mr-1 ml-2 w-4 h-4'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    fillRule='evenodd'
+                    d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
+                    clipRule='evenodd'
+                  ></path>
+                </svg>
+              </a>
+            ) : (
+              <></>
+            )}
+            {block.value.properties['jRIm'] ? (
+              <a
+                href={`${block.value.properties['jRIm'][0][0]}
                 `}
-              className='inline-flex items-center px-3 py-2 ml-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800'
-            >
-              Source
-              <svg
-                aria-hidden='true'
-                className='-mr-1 ml-2 w-4 h-4'
-                fill='currentColor'
-                viewBox='0 0 20 20'
-                xmlns='http://www.w3.org/2000/svg'
+                className='inline-flex items-center px-3 py-2 ml-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800'
               >
-                <path
-                  fillRule='evenodd'
-                  d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
-                  clipRule='evenodd'
-                ></path>
-              </svg>
-            </a>
-          ) : (
-            <></>
-          )}
+                Source
+                <svg
+                  aria-hidden='true'
+                  className='-mr-1 ml-2 w-4 h-4'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    fillRule='evenodd'
+                    d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
+                    clipRule='evenodd'
+                  ></path>
+                </svg>
+              </a>
+            ) : (
+              <></>
+            )}
+          </div>
         </div>
       ) : (
         <></>
@@ -123,9 +127,9 @@ export default function NotionDomainPage(props) {
     </>
   ))
   return (
-    <>
+    <div className='container px-2 mx-auto mt-4 sm:px-0'>
       {notes}
       {/* <NotionPage {...props} /> */}
-    </>
+    </div>
   )
 }
