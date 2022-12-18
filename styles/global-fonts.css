@@ -1,26 +1,17 @@
 @font-face {
-  font-family: 'Soyuz Grotesk';
-  src: url('/fonts/soyuz/bold.otf');
-  format: ('otf');
+  font-family: 'Steinbeck';
+  src: url('/fonts/steinbeck/regular.ttf');
+  format: ('ttf');
   font-display: swap;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'TT Ramillas';
-  src: url('/fonts/private/ramillas/black.otf');
-  format: ('otf');
+  font-family: 'Atyp Regular Variable';
+  src: url('/fonts/atyp/variable.ttf');
+  format: ('ttf');
   font-display: swap;
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TT Ramillas Outline';
-  src: url('/fonts/private/ramillas/blackoutline.otf');
-  format: ('otf');
-  font-display: swap;
-  font-weight: 800;
+  font-weight: 400;
   font-style: normal;
 }
