@@ -9,10 +9,6 @@ export default class MyDocument extends Document {
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         <Html lang='en'>
           <Head>
-            <meta
-              name='viewport'
-              content='width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0'
-            />
             <link rel='shortcut icon' href='/favicon.ico' />
             <link
               rel='icon'

@@ -1,6 +1,7 @@
 // global styles shared across the entire site
 import * as React from 'react'
 import type { AppProps } from 'next/app'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 import * as Fathom from 'fathom-client'
@@ -20,6 +21,7 @@ import 'styles/notion.css'
 // global style overrides for prism theme (optional)
 import 'styles/prism-theme.css'
 
+import { Layout } from '@/components/ui/layout'
 import { bootstrap } from '@/lib/bootstrap-client'
 import {
   fathomConfig,
@@ -28,6 +30,7 @@ import {
   posthogConfig,
   posthogId
 } from '@/lib/config'
+import { StreamlinesFull } from '@/lib/streamlines/streamlines-draw'
 
 if (!isServer) {
   bootstrap()
@@ -62,5 +65,17 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [router.events])
 
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0'
+        />
+      </Head>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
+  )
 }
