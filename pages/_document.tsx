@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
             <link rel='manifest' href='/manifest.json' />
           </Head>
 
-          <body className='bg-stone-200 text-stone-700'>
+          <body className='bg-stone-200 text-stone-700 font-atyp'>
             <Main />
             <NextScript />
           </body>

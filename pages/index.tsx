@@ -17,10 +17,10 @@ export default function NotionDomainPage() {
         <meta name='description' content={t('index.meta')} />
       </Head>
       <LanguageSwitcherMenu />
-      <h1 className='text-4xl leading-normal sm:text-[8rem] font-soyuz whitespace-nowrap'>
+      <h1 className='text-4xl leading-normal sm:text-[8rem] font-domain uppercase font-extrabold whitespace-nowrap'>
         {t('index.hero')}
         <br />
-        <span className='font-soyuz'>{t('index.hero2')}</span>
+        <span className=''>{t('index.hero2')}</span>
       </h1>
       <Link href='/notes'>
         <a className='text-3xl'>notes</a>

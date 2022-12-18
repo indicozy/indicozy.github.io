@@ -22,53 +22,67 @@ export const getStaticProps = async () => {
 
 export default function NotionDomainPage(props) {
   const notes = Object.values(props.recordMap.block).map((block: any, i) => (
-    <>
+    <div key={i}>
       {block.value &&
       block.value.properties &&
       block.value.type &&
       block.value.type === 'page' ? (
-        <div key={i} className='py-20 my-10 border border-b-black'>
+        <div className='py-20 border-b border-b-black'>
           {block.value.properties.title ? (
             <>
-              <p className='text-2xl sm:text-6xl font-soyuz'>
-                {block.value.properties.title[0][0]}
-              </p>
-              {/* <p>
+              <Link
+                href={`${block.value.properties.title[0][0]
+                  .toLowerCase()
+                  .replace(/[^A-Za-z0-9 ]/g, '')
+                  .replaceAll(' ', '-')}
+                `}
+              >
+                <a className='inline-block text-2xl font-semibold bg-stone-200 sm:text-6xl font-domain'>
+                  {block.value.properties.title[0][0]}
+                </a>
+                {/* <p>
                 {block.value.properties.title[0][0]
                   .toLowerCase()
                   .replace(/[^A-Za-z0-9 ]/g, '')
                   .replaceAll(' ', '-')}
               </p> */}
+              </Link>
             </>
           ) : (
             <></>
           )}
           {/* {block.value.id ? <p>{block.value.id}</p> : <></>} */}
           {block.value.properties['Y]q}'] ? (
-            <p>{block.value.properties['Y]q}'][0][0]}</p>
+            <div>
+              <p className='inline-block text-base bg-stone-200'>
+                {block.value.properties['Y]q}'][0][0]}
+              </p>
+            </div>
           ) : (
             <></>
           )}
-          {block.value.properties['kKTk'] ? (
-            <Badge>{block.value.properties['kKTk'][0][0]}</Badge>
-          ) : (
-            <></>
-          )}
-          {block.value.properties['ea=E'] ? (
-            <>
-              {block.value.properties['ea=E'][0][0].split(',').map((e, i) => (
-                <Badge key={i}> {e}</Badge>
-              ))}
-            </>
-          ) : (
-            <></>
-          )}
-          {block.value.properties['cKLX'] ? (
-            <Badge>{block.value.properties['cKLX'][0][0]}</Badge>
-          ) : (
-            <></>
-          )}
-          <div className='mt-4'>
+          <div>
+            {block.value.properties['kKTk'] ? (
+              <Badge>{block.value.properties['kKTk'][0][0]}</Badge>
+            ) : (
+              <></>
+            )}
+            {block.value.properties['ea=E'] ? (
+              <>
+                {block.value.properties['ea=E'][0][0].split(',').map((e, i) => (
+                  <Badge key={i}> {e}</Badge>
+                ))}
+              </>
+            ) : (
+              <></>
+            )}
+            {block.value.properties['cKLX'] ? (
+              <Badge>{block.value.properties['cKLX'][0][0]}</Badge>
+            ) : (
+              <></>
+            )}
+          </div>
+          {/* <div className='mt-4'>
             {block.value.properties.title ? (
               <Link
                 href={`${block.value.properties.title[0][0]
@@ -121,17 +135,12 @@ export default function NotionDomainPage(props) {
             ) : (
               <></>
             )}
-          </div>
+          </div> */}
         </div>
       ) : (
         <></>
       )}
-    </>
-  ))
-  return (
-    <div className='container px-2 mx-auto sm:px-0'>
-      {notes}
-      {/* <NotionPage {...props} /> */}
     </div>
-  )
+  ))
+  return <div className='container px-2 mx-auto sm:px-0'>{notes}</div>
 }

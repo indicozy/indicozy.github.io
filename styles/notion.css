@@ -167,7 +167,7 @@
 }
 
 .notion-title {
-  @apply text-center block font-soyuz;
+  @apply text-center block font-domain;
 }
 
 .notion-collection-row {

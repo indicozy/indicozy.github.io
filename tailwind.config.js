@@ -8,9 +8,8 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      soyuz: ['Soyuz Grotesk'],
-      ramillas: ['TT Ramillas'],
-      ramillas_outline: ['TT Ramillas Outline']
+      domain: ['Steinbeck'], // TT Norms Pro, KZ Gropled, KZ Domain Display
+      atyp: ['Atyp Regular Variable']
     }
   },
   plugins: []
