@@ -33,7 +33,8 @@ export default function NotionDomainPage(props) {
               <Link
                 href={`${block.value.properties.title[0][0]
                   .toLowerCase()
-                  .replace(/[^A-Za-z0-9 ]/g, '')
+                  .replaceAll('? ', '')
+                  .replace(/[^A-Za-z0-9\- ]/g, '')
                   .replaceAll(' ', '-')}
                 `}
               >
