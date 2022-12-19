@@ -22,9 +22,11 @@ export const Streamlines = () => {
     console.log(f)
 
     let sizeMultiplier = 1
-    if (size.width < 600) {
+    if (size.width < 720) {
       sizeMultiplier = 2
     }
+    canvas.width = size.width * sizeMultiplier
+    canvas.height = size.height * sizeMultiplier
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 
@@ -43,18 +45,15 @@ export const Streamlines = () => {
     function transform(pt) {
       const tx = (pt.x - boundingBox.left) / boundingBox.width
       const ty = (pt.y - boundingBox.top) / boundingBox.height
-      const width = size.width * sizeMultiplier
-      const height = size.height * sizeMultiplier
-      // var ar = width/height;
-      //tx /= ar;
+      const width = size.width
+      const height = size.height
+      // const ar = width / height
+      // tx /= ar
       return {
         x: tx * width,
-        y: (1 - ty) * height
+        y: ty * height
       }
     }
-
-    canvas.width = size.width * sizeMultiplier
-    canvas.height = size.height * sizeMultiplier
 
     if (streamline.current) {
       streamline.current.dispose()
