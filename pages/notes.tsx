@@ -31,11 +31,7 @@ export default function NotionDomainPage(props) {
           {block.value.properties.title ? (
             <>
               <Link
-                href={`${block.value.properties.title[0][0]
-                  .toLowerCase()
-                  .replaceAll('? ', '')
-                  .replace(/[^A-Za-z0-9\- ]/g, '')
-                  .replaceAll(' ', '-')}
+                href={`${block.value.id.replaceAll('-', '')}
                 `}
               >
                 <a className='inline-block text-2xl font-semibold bg-stone-200 sm:text-6xl font-domain'>
