@@ -52,16 +52,7 @@ export default function NotionDomainPage(props) {
             <></>
           )}
           {/* {block.value.id ? <p>{block.value.id}</p> : <></>} */}
-          {block.value.properties['Y]q}'] ? (
-            <div>
-              <p className='inline-block text-base bg-stone-200'>
-                {block.value.properties['Y]q}'][0][0]}
-              </p>
-            </div>
-          ) : (
-            <></>
-          )}
-          <div>
+          <div className='mt-1'>
             {block.value.properties['kKTk'] ? (
               <Badge>{block.value.properties['kKTk'][0][0]}</Badge>
             ) : (
@@ -82,6 +73,15 @@ export default function NotionDomainPage(props) {
               <></>
             )}
           </div>
+          {block.value.properties['Y]q}'] ? (
+            <div className='mt-2'>
+              <p className='inline-block text-base bg-stone-200'>
+                {block.value.properties['Y]q}'][0][0]}
+              </p>
+            </div>
+          ) : (
+            <></>
+          )}
           {/* <div className='mt-4'>
             {block.value.properties.title ? (
               <Link
@@ -142,5 +142,10 @@ export default function NotionDomainPage(props) {
       )}
     </div>
   ))
-  return <div className='container px-2 mx-auto sm:px-0'>{notes}</div>
+  return (
+    <div className='container px-2 mx-auto sm:px-0'>
+      {/* <NotionPage {...props} /> */}
+      {notes}
+    </div>
+  )
 }

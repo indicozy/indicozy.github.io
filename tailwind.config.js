@@ -9,7 +9,8 @@ module.exports = {
     extend: {},
     fontFamily: {
       domain: ['Steinbeck'], // TT Norms Pro, KZ Gropled, KZ Domain Display
-      atyp: ['Atyp Regular Variable']
+      atyp: ['Atyp Regular Variable'],
+      comic: ['Comic Code Ligatures']
     }
   },
   plugins: []
