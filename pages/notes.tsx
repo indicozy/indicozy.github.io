@@ -144,7 +144,11 @@ export default function NotionDomainPage(props) {
   ))
   return (
     <div className='container px-2 mx-auto sm:px-0'>
-      <NotionPage {...props} />
+      {process.env.NODE_ENV === 'development' ? (
+        <NotionPage {...props} />
+      ) : (
+        <></>
+      )}
       {notes}
     </div>
   )
