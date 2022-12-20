@@ -73,7 +73,7 @@ export const Streamlines = () => {
       // As usual, define your vector field:
       vectorField: (p) => func(p),
       timeStep: 0.01,
-      stepsPerIteration: 4,
+      stepsPerIteration: 1,
       dSep: 0.2,
       dTest: 0.005,
 
