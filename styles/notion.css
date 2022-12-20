@@ -364,7 +364,7 @@
 }
 
 .notion-page-content-inner > * {
-  @apply bg-stone-200 font-atyp;
+  @apply bg-background font-atyp;
 }
 .notion-h {
   @apply font-domain;
@@ -384,7 +384,7 @@
 }
 
 .notion-aside-table-of-contents {
-  @apply bg-stone-100 font-atyp;
+  @apply bg-background font-atyp;
 }
 .notion-aside-table-of-contents-header {
   @apply font-domain;
@@ -407,11 +407,11 @@ pre[class*='language-'] {
 }
 
 .notion-collection-row-value {
-  @apply bg-stone-200 flex-none mx-auto text-sm;
+  @apply bg-background flex-none mx-auto text-sm;
 }
 
 .notion-title {
-  @apply bg-stone-200;
+  @apply bg-background;
 }
 .notion-page {
   @apply font-atyp;

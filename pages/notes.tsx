@@ -34,7 +34,7 @@ export default function NotionDomainPage(props) {
                 href={`${block.value.id.replaceAll('-', '')}
                 `}
               >
-                <a className='inline-block text-2xl font-semibold bg-stone-200 sm:text-6xl font-domain'>
+                <a className='inline-block text-2xl font-semibold bg-background sm:text-6xl font-domain'>
                   {block.value.properties.title[0][0]}
                 </a>
                 {/* <p>
@@ -72,7 +72,7 @@ export default function NotionDomainPage(props) {
           </div>
           {block.value.properties['Y]q}'] ? (
             <div className='mt-2'>
-              <p className='inline-block text-base bg-stone-200'>
+              <p className='inline-block text-base bg-background'>
                 {block.value.properties['Y]q}'][0][0]}
               </p>
             </div>
