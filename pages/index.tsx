@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { LanguageSwitcher, useTranslation } from 'next-export-i18n'
 
+import { Span } from '@/components/ui/span'
 import { StreamlinesFull } from '@/lib/streamlines/streamlines-draw'
 
 import { LanguageSwitcherMenu } from '../components/language-switcher-menu'
@@ -25,18 +26,18 @@ export default function NotionDomainPage() {
           </h1>
           <div className='leading-[3]'>
             <p className='text-2xl font-bold uppercase font-domain'>
-              <span className='bg-background'>Burkit Karlibay</span>
+              <Span>Burkit Karlibay</Span>
             </p>
             <p>
-              <span className='bg-background'>Fullstack developer</span>
+              <Span>Fullstack developer</Span>
             </p>
             <p>
-              <span className='bg-background'>
+              <Span>
                 Currently working as a CEO at{' '}
                 <Link className='underline' href='https://op-onai.kz'>
                   op-onai.kz
                 </Link>{' '}
-              </span>
+              </Span>
             </p>
           </div>
         </div>

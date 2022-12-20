@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 import * as Fathom from 'fathom-client'
 // used for rendering equations (optional)
 import 'katex/dist/katex.min.css'
+import { ThemeProvider } from 'next-themes'
 import posthog from 'posthog-js'
 // used for code syntax highlighting (optional)
 import 'prismjs/themes/prism-coy.css'
@@ -73,9 +74,11 @@ export default function App({ Component, pageProps }: AppProps) {
           content='width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0'
         />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ThemeProvider attribute='class'>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </>
   )
 }

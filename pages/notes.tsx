@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { NotionPage } from '@/components/NotionPage'
 import { Badge } from '@/components/ui/badge'
+import { Span } from '@/components/ui/span'
 import { domain } from '@/lib/config'
 import { resolveNotionPage } from '@/lib/resolve-notion-page'
 
@@ -27,21 +28,15 @@ export default function NotionDomainPage(props) {
       block.value.properties &&
       block.value.type &&
       block.value.type === 'page' ? (
-        <div className='py-20 border-b border-b-black'>
+        <div className='py-20 border-b border-b-black dark:border-b-zinc-50'>
           {block.value.properties.title ? (
             <>
               <Link
-                className='inline-block text-2xl font-semibold bg-background sm:text-6xl font-domain'
+                className='inline-block text-2xl font-semibold sm:text-6xl font-domain'
                 href={`${block.value.id.replaceAll('-', '')}
                 `}
               >
-                {block.value.properties.title[0][0]}
-                {/* <p>
-                {block.value.properties.title[0][0]
-                  .toLowerCase()
-                  .replace(/[^A-Za-z0-9 ]/g, '')
-                  .replaceAll(' ', '-')}
-              </p> */}
+                <Span>{block.value.properties.title[0][0]}</Span>
               </Link>
             </>
           ) : (
@@ -71,8 +66,8 @@ export default function NotionDomainPage(props) {
           </div>
           {block.value.properties['Y]q}'] ? (
             <div className='mt-2'>
-              <p className='inline-block text-base bg-background'>
-                {block.value.properties['Y]q}'][0][0]}
+              <p className='inline-block text-base'>
+                <Span>{block.value.properties['Y]q}'][0][0]}</Span>
               </p>
             </div>
           ) : (

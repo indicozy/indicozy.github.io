@@ -15,6 +15,7 @@
 .notion {
   --notion-max-width: 720px;
   --notion-header-height: 54px;
+  @apply text-foreground dark:text-fore_dark;
 }
 
 .notion-page {
@@ -363,9 +364,23 @@
   background: transparent;
 }
 
-.notion-page-content-inner > * {
-  @apply bg-background font-atyp;
+.notion-table-of-contents-item,
+.notion-page-link {
+  @apply text-foreground dark:text-fore_dark;
 }
+
+.notion-page-icon {
+  @apply fill-foreground dark:fill-fore_dark;
+}
+
+.notion-collection-card {
+  @apply bg-stone-50 dark:bg-zinc-700 shadow-none border border-foreground dark:border-none rounded-xl p-2 hover:bg-stone-200 transition-colors;
+}
+
+.notion-page-content-inner > * {
+  @apply bg-background dark:bg-back_dark font-atyp;
+}
+
 .notion-h {
   @apply font-domain;
 }
@@ -384,7 +399,7 @@
 }
 
 .notion-aside-table-of-contents {
-  @apply bg-background font-atyp;
+  @apply bg-background dark:bg-back_dark font-atyp;
 }
 .notion-aside-table-of-contents-header {
   @apply font-domain;
@@ -407,7 +422,7 @@ pre[class*='language-'] {
 }
 
 .notion-collection-row-value {
-  @apply bg-background flex-none mx-auto text-sm;
+  @apply bg-background dark:bg-back_dark flex-none mx-auto text-sm;
 }
 a.notion-table-of-contents-active-item {
   @apply text-stone-800;
@@ -415,7 +430,7 @@ a.notion-table-of-contents-active-item {
 }
 
 .notion-title {
-  @apply bg-background;
+  @apply bg-background dark:bg-back_dark;
 }
 .notion-page {
   @apply font-atyp;

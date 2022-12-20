@@ -3,6 +3,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
@@ -10,7 +11,10 @@ module.exports = {
   ],
   theme: {
     colors: {
-      background: '#ebeae9',
+      background: '#ece7e1',
+      foreground: 'rgb(26, 24, 24)',
+      back_dark: '#27272a',
+      fore_dark: '#e4e4e7',
       transparent: 'transparent',
       inherit: 'inherit',
       current: 'currentColor',

@@ -1,14 +1,25 @@
 import { useEffect, useMemo, useRef } from 'react'
 
 import streamlines from '@anvaka/streamlines'
+import { useTheme } from 'next-themes'
 import { useWindowSize } from 'react-use'
 
 import generateFunction from './generate-function'
 
+// background: '#ece7e1',
+// foreground: 'rgb(26, 24, 24)',
+// back_dark: '#27272a',
+// fore_dark: '#e4e4e7',
+
 export const Streamlines = () => {
+  const { theme, setTheme } = useTheme()
   const ref = useRef(null)
   const boundingBox = { left: -5, top: -5, width: 10, height: 10 }
-  const lineColor = 'rgba(30, 30, 30, 0.6)'
+
+  let lineColor = 'rgb(26, 24, 24)'
+  if (theme === 'dark') {
+    lineColor = '#e4e4e7'
+  }
 
   const size = useWindowSize()
   const streamline = useRef(null)
@@ -28,7 +39,7 @@ export const Streamlines = () => {
     canvas.width = size.width * sizeMultiplier
     canvas.height = size.height * sizeMultiplier
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    // ctx.clearRect(0, 0, canvas.width, canvas.height)
 
     function onPointAdded(a, b) {
       ctx.beginPath()
@@ -70,13 +81,13 @@ export const Streamlines = () => {
       onPointAdded
     })
     streamline.current.run()
-  }, [size])
+  }, [size, theme])
   return <canvas ref={ref}></canvas>
 }
 
 export const StreamlinesFull = () => {
   return (
-    <div className='fixed z-[-1] w-screen h-screen'>
+    <div className='fixed w-screen h-screen z-[-1]'>
       <Streamlines />
     </div>
   )
