@@ -417,6 +417,10 @@ pre[class*='language-'] {
 .notion-collection-row {
   @apply py-0 mb-4 border-0;
 }
+.notion-bookmark > div:first-child,
+.notion-bookmark-link-text {
+  @apply text-foreground dark:text-fore_dark;
+}
 
 .notion-collection-page-properties .notion-collection-column-title {
 }
