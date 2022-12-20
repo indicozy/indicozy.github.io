@@ -1,4 +1,6 @@
-import { Menu } from '@headlessui/react'
+import { Fragment } from 'react'
+
+import { Menu, Transition } from '@headlessui/react'
 
 type TypeDropdownItem = {
   text: string
@@ -14,31 +16,49 @@ type TypeDropdown = {
 
 export function MyDropdown(props: TypeDropdown) {
   return (
-    <Menu>
-      <Menu.Button>{props.button}</Menu.Button>
-      <Menu.Items>
-        {props.items.map((item, i) => (
-          <Menu.Item key={i}>
-            {({ active }) => {
-              if (item.href)
-                return (
-                  <a className={`${active && 'bg-blue-500'}`} href={item.href}>
-                    {item.text}
-                  </a>
-                )
-              return (
-                <button
-                  onClick={() => {
-                    item.onClick()
-                  }}
-                >
-                  {item.text}
-                </button>
-              )
-            }}
-          </Menu.Item>
-        ))}
-      </Menu.Items>
+    <Menu as='div' className='inline-block relative text-xl text-center'>
+      <Menu.Button className={'p-2'}>{props.button}</Menu.Button>
+      <Transition
+        as={Fragment}
+        enter='transition ease-out duration-100'
+        enterFrom='transform opacity-0 scale-95'
+        enterTo='transform opacity-100 scale-100'
+        leave='transition ease-in duration-75'
+        leaveFrom='transform opacity-100 scale-100'
+        leaveTo='transform opacity-0 scale-95'
+      >
+        <Menu.Items className='absolute right-0 left-0 bg-stone-100'>
+          <div className='flex flex-col items-center px-2'>
+            {props.items.map((item, i) => (
+              <Menu.Item key={i}>
+                {({ active }) => {
+                  if (item.href)
+                    return (
+                      <a
+                        className={`${active && 'bg-blue-500'} p-2`}
+                        href={item.href}
+                      >
+                        {item.text}
+                      </a>
+                    )
+                  return (
+                    <button
+                      className={
+                        `${active ? 'bg-rose-300 transition' : ``} ` + 'px-1'
+                      }
+                      onClick={() => {
+                        item.onClick()
+                      }}
+                    >
+                      {item.text}
+                    </button>
+                  )
+                }}
+              </Menu.Item>
+            ))}
+          </div>
+        </Menu.Items>
+      </Transition>
     </Menu>
   )
 }

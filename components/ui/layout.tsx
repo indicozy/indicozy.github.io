@@ -7,7 +7,7 @@ export const Layout = ({ children }) => {
     <>
       <StreamlinesFull />
       <Sidebar />
-      <main className='ml-24'>{children}</main>
+      <main className='ml-28'>{children}</main>
     </>
   )
 }

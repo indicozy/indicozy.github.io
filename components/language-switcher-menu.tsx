@@ -19,16 +19,17 @@ export function LanguageSwitcherMenu() {
   }
   const { t } = useTranslation()
   const langs = ['en', 'ru', 'kz']
-  const [query] = useLanguageQuery()
   return (
-    <MyDropdown
-      button={t('lang')}
-      items={langs.map((lang) => ({
-        text: lang,
-        onClick: () => {
-          updateLanguage(lang)
-        }
-      }))}
-    />
+    <div>
+      <MyDropdown
+        button={t('lang')}
+        items={langs.map((lang) => ({
+          text: lang,
+          onClick: () => {
+            updateLanguage(lang)
+          }
+        }))}
+      />
+    </div>
   )
 }

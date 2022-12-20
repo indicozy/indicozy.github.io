@@ -16,14 +16,31 @@ export default function NotionDomainPage() {
         <title>{t('index.title')}</title>
         <meta name='description' content={t('index.meta')} />
       </Head>
-      <h1 className='text-4xl leading-normal sm:text-[8rem] font-domain uppercase font-extrabold whitespace-nowrap'>
-        {t('index.hero')}
-        <br />
-        <span className=''>{t('index.hero2')}</span>
-      </h1>
-      <Link href='/notes'>
-        <a className='text-3xl'>notes</a>
-      </Link>
+      <div className='relative ml-32 h-screen'>
+        <div className='absolute left-0 bottom-20'>
+          <h1 className='text-4xl leading-normal sm:text-[6rem] font-domain uppercase font-extrabold whitespace-nowrap'>
+            {t('index.hero')}
+            <br />
+            <span className=''>{t('index.hero2')}</span>
+          </h1>
+          <div className='leading-[3]'>
+            <p className='text-2xl font-bold uppercase font-domain'>
+              <span className='bg-background'>Burkit Karlibay</span>
+            </p>
+            <p>
+              <span className='bg-background'>Fullstack developer</span>
+            </p>
+            <p>
+              <span className='bg-background'>
+                Currently working as a CEO at{' '}
+                <Link className='underline' href='https://op-onai.kz'>
+                  op-onai.kz
+                </Link>{' '}
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
     </>
   )
 }

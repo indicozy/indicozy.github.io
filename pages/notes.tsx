@@ -31,12 +31,11 @@ export default function NotionDomainPage(props) {
           {block.value.properties.title ? (
             <>
               <Link
+                className='inline-block text-2xl font-semibold bg-background sm:text-6xl font-domain'
                 href={`${block.value.id.replaceAll('-', '')}
                 `}
               >
-                <a className='inline-block text-2xl font-semibold bg-background sm:text-6xl font-domain'>
-                  {block.value.properties.title[0][0]}
-                </a>
+                {block.value.properties.title[0][0]}
                 {/* <p>
                 {block.value.properties.title[0][0]
                   .toLowerCase()

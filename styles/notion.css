@@ -409,6 +409,10 @@ pre[class*='language-'] {
 .notion-collection-row-value {
   @apply bg-background flex-none mx-auto text-sm;
 }
+a.notion-table-of-contents-active-item {
+  @apply text-stone-800;
+  color: #dc2626 !important;
+}
 
 .notion-title {
   @apply bg-background;
