@@ -27,7 +27,7 @@ export function MyDropdown(props: TypeDropdown) {
         leaveFrom='transform opacity-100 scale-100'
         leaveTo='transform opacity-0 scale-95'
       >
-        <Menu.Items className='absolute right-0 left-0 bg-stone-100'>
+        <Menu.Items className='absolute right-0 left-0 bg-stone-100 dark:bg-zinc-700'>
           <div className='flex flex-col items-center px-2'>
             {props.items.map((item, i) => (
               <Menu.Item key={i}>
@@ -44,7 +44,7 @@ export function MyDropdown(props: TypeDropdown) {
                   return (
                     <button
                       className={
-                        `${active ? 'bg-rose-300 transition' : ``} ` + 'px-1'
+                        `${active ? 'bg-rose-300 transition dark:bg-zinc-500' : ``} ` + 'px-1'
                       }
                       onClick={() => {
                         item.onClick()
