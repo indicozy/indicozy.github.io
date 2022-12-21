@@ -159,21 +159,21 @@ export default async function OGImage(req: NextRequest) {
     ),
     {
       width: 1200,
-      height: 630
-      // fonts: [
-      //   {
-      //     name: 'Atyp Regular Variable',
-      //     data: AtypFont,
-      //     style: 'normal',
-      //     weight: 400
-      //   },
-      //   {
-      //     name: 'Steinbeck',
-      //     data: SteinbeckFont,
-      //     style: 'normal',
-      //     weight: 400
-      //   }
-      // ]
+      height: 630,
+      fonts: [
+        {
+          name: 'Atyp Regular Variable',
+          data: AtypFont,
+          style: 'normal',
+          weight: 400
+        },
+        {
+          name: 'Steinbeck',
+          data: SteinbeckFont,
+          style: 'normal',
+          weight: 400
+        }
+      ]
     }
   )
 }
