@@ -31,7 +31,6 @@ import {
   posthogConfig,
   posthogId
 } from '@/lib/config'
-import { StreamlinesFull } from '@/lib/streamlines/streamlines-draw'
 
 if (!isServer) {
   bootstrap()

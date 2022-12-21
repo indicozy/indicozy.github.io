@@ -1,12 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { LanguageSwitcher, useTranslation } from 'next-export-i18n'
+import { useTranslation } from 'next-export-i18n'
 
 import { Span } from '@/components/ui/span'
-import { StreamlinesFull } from '@/lib/streamlines/streamlines-draw'
-
-import { LanguageSwitcherMenu } from '../components/language-switcher-menu'
 
 export default function NotionDomainPage() {
   const { t } = useTranslation()
