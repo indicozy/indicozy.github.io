@@ -14,15 +14,15 @@ export default function NotionDomainPage() {
         <title>{t('index.title')}</title>
         <meta name='description' content={t('index.meta')} />
       </Head>
-      <div className='relative ml-32 h-screen'>
-        <div className='absolute left-0 bottom-20'>
-          <h1 className='text-4xl leading-normal sm:text-[6rem] font-domain uppercase font-extrabold whitespace-nowrap'>
+      <div className='relative ml-2 h-screen sm:ml-32'>
+        <div className='absolute left-0 bottom-40 sm:bottom-20'>
+          <h1 className='text-3xl leading-normal sm:text-[6rem] font-domain uppercase font-extrabold whitespace-nowrap'>
             {t('index.hero')}
             <br />
             <span className=''>{t('index.hero2')}</span>
           </h1>
           <div className='leading-[3]'>
-            <p className='text-2xl font-bold uppercase font-domain'>
+            <p className='text-xl font-bold uppercase sm:text-2xl font-domain'>
               <Span>{t('name')}</Span>
             </p>
             <p>
