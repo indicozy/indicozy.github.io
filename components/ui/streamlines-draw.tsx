@@ -4,7 +4,7 @@ import streamlines from '@anvaka/streamlines'
 import { useTheme } from 'next-themes'
 import { useWindowSize } from 'react-use'
 
-import generateFunction from './generate-function'
+import generateFunction from '../../lib/streamlines/generate-function'
 
 // background: '#ece7e1',
 // foreground: 'rgb(26, 24, 24)',
@@ -16,9 +16,9 @@ export const Streamlines = () => {
   const ref = useRef(null)
   const boundingBox = { left: -5, top: -5, width: 10, height: 10 }
 
-  let lineColor = 'rgb(26, 24, 24)'
+  let lineColor = '#a8a29e'
   if (theme === 'dark') {
-    lineColor = '#e4e4e7'
+    lineColor = '#52525b'
   }
 
   const size = useWindowSize()
@@ -73,7 +73,7 @@ export const Streamlines = () => {
       // As usual, define your vector field:
       vectorField: (p) => func(p),
       timeStep: 0.01,
-      stepsPerIteration: 1,
+      stepsPerIteration: 3,
       dSep: 0.2,
       dTest: 0.005,
 

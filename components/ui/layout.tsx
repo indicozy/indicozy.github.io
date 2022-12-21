@@ -1,7 +1,6 @@
-import { StreamlinesFull } from '@/lib/streamlines/streamlines-draw'
-
 import { Header } from './header'
 import { Sidebar } from './sidebar'
+import { StreamlinesFull } from './streamlines-draw'
 
 export const Layout = ({ children }) => {
   return (

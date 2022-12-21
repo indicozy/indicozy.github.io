@@ -26,7 +26,7 @@ export default function NotionDomainPage() {
           </h1>
           <div className='leading-[3]'>
             <p className='text-2xl font-bold uppercase font-domain'>
-              <Span>Burkit Karlibay</Span>
+              <Span>{t('name')}</Span>
             </p>
             <p>
               <Span>Fullstack developer</Span>
