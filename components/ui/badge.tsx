@@ -5,7 +5,7 @@ type TypeBadge = {
 }
 export const Badge: FC<TypeBadge> = ({ children }) => {
   return (
-    <span className='bg-pink-100 dark:bg-zinc-700 text-sm font-semibold mr-2 px-2.5 py-1 rounded'>
+    <span className='bg-stone-50 dark:bg-zinc-700 text-sm font-semibold mr-2 px-2.5 py-1 rounded'>
       {children}
     </span>
   )

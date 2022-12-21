@@ -44,7 +44,11 @@ export function MyDropdown(props: TypeDropdown) {
                   return (
                     <button
                       className={
-                        `${active ? 'bg-rose-300 transition dark:bg-zinc-500' : ``} ` + 'px-1'
+                        `${
+                          active
+                            ? 'bg-rose-300 transition dark:bg-zinc-500'
+                            : ``
+                        } ` + 'px-1'
                       }
                       onClick={() => {
                         item.onClick()

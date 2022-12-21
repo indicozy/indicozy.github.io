@@ -1,13 +1,15 @@
 import { StreamlinesFull } from '@/lib/streamlines/streamlines-draw'
 
+import { Header } from './header'
 import { Sidebar } from './sidebar'
 
 export const Layout = ({ children }) => {
   return (
-    <div>
+    <>
       <StreamlinesFull />
+      <Header />
       <Sidebar />
-      <main className='ml-28'>{children}</main>
-    </div>
+      <main className='mt-20 ml-0 sm:mt-0 sm:ml-28'>{children}</main>
+    </>
   )
 }
