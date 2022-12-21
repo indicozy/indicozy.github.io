@@ -6,11 +6,11 @@ import { ImageResponse } from '@vercel/og'
 import { api, apiHost, rootNotionPageId } from '@/lib/config'
 import { NotionPageInfo } from '@/lib/types'
 
-const interRegularFontP = fetch(
+const AtypFontP = fetch(
   new URL('../../public/fonts/atyp/variable.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer())
 
-const interBoldFontP = fetch(
+const SteinbeckFontFontP = fetch(
   new URL('../../public/fonts/steinbeck/regular.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer())
 
@@ -38,9 +38,9 @@ export default async function OGImage(req: NextRequest) {
   const pageInfo: NotionPageInfo = await pageInfoRes.json()
   console.log(pageInfo)
 
-  const [interRegularFont, interBoldFont] = await Promise.all([
-    interRegularFontP,
-    interBoldFontP
+  const [AtypFont, SteinbeckFont] = await Promise.all([
+    AtypFontP,
+    SteinbeckFontFontP
   ])
 
   return new ImageResponse(
@@ -55,7 +55,7 @@ export default async function OGImage(req: NextRequest) {
           backgroundColor: '#1F2027',
           alignItems: 'center',
           justifyContent: 'center',
-          fontFamily: '"Inter", sans-serif',
+          fontFamily: '"Steinbeck", sans-serif',
           color: 'black'
         }}
       >
@@ -116,8 +116,8 @@ export default async function OGImage(req: NextRequest) {
             <div
               style={{
                 fontSize: 70,
-                fontWeight: 700,
-                fontFamily: 'Inter'
+                fontWeight: 400,
+                fontFamily: 'Atyp Regular Variable'
               }}
             >
               {pageInfo.title}
@@ -159,21 +159,21 @@ export default async function OGImage(req: NextRequest) {
     ),
     {
       width: 1200,
-      height: 630,
-      fonts: [
-        {
-          name: 'Inter',
-          data: interRegularFont,
-          style: 'normal',
-          weight: 400
-        },
-        {
-          name: 'Inter',
-          data: interBoldFont,
-          style: 'normal',
-          weight: 700
-        }
-      ]
+      height: 630
+      // fonts: [
+      //   {
+      //     name: 'Atyp Regular Variable',
+      //     data: AtypFont,
+      //     style: 'normal',
+      //     weight: 400
+      //   },
+      //   {
+      //     name: 'Steinbeck',
+      //     data: SteinbeckFont,
+      //     style: 'normal',
+      //     weight: 400
+      //   }
+      // ]
     }
   )
 }
