@@ -1,17 +1,22 @@
 import * as React from 'react'
 import Link from 'next/link'
 
+import { useTranslation } from 'next-export-i18n'
+import { NotionAPI } from 'notion-client'
+
 import { NotionPage } from '@/components/NotionPage'
 import { Badge } from '@/components/ui/badge'
 import { Span } from '@/components/ui/span'
 import { domain } from '@/lib/config'
 import { resolveNotionPage } from '@/lib/resolve-notion-page'
+import { NotionMap, NotionPageInfo } from '@/lib/types'
 
 export const getStaticProps = async () => {
   try {
     const props = await resolveNotionPage(domain)
+    const time = Date.now()
 
-    return { props, revalidate: 600 }
+    return { props: { props, time }, revalidate: 600 }
   } catch (err) {
     console.error('page error', domain, err)
 
@@ -21,7 +26,15 @@ export const getStaticProps = async () => {
   }
 }
 
-export default function NotionDomainPage(props) {
+export default function NotionDomainPage({
+  props,
+  time
+}: {
+  props: any
+  time: number
+}) {
+  const timeParsed = new Date(time)
+  const { t } = useTranslation()
   const notes = Object.values(props.recordMap.block).map((block: any, i) => (
     <div key={i}>
       {block.value &&
@@ -135,6 +148,8 @@ export default function NotionDomainPage(props) {
   ))
   return (
     <div className='container px-2 mx-auto sm:px-0'>
+      {/* <div>Retrieved at {timeParsed.toLocaleString('kz-KZ')}</div> */}
+
       {process.env.NODE_ENV === 'development' ? (
         <NotionPage {...props} />
       ) : (
