@@ -1,4 +1,6 @@
-import { PaddingIcon, StitchesLogoIcon } from '@radix-ui/react-icons';
+import { ReactNode } from 'react'
+
+import { PaddingIcon, StitchesLogoIcon } from '@radix-ui/react-icons'
 import {
   IconBolt,
   IconBook,
@@ -12,6 +14,7 @@ import {
   IconBrandFigma,
   IconBrandGatsby,
   IconBrandGit,
+  IconBrandGithub,
   IconBrandGoogle,
   IconBrandGraphql,
   IconBrandHtml5,
@@ -23,7 +26,9 @@ import {
   IconBrandReact,
   IconBrandRedux,
   IconBrandTailwind,
+  IconBrandWix,
   IconBrandWordpress,
+  IconBrandYcombinator,
   IconDatabase,
   IconDiamond,
   IconEye,
@@ -48,443 +53,478 @@ import {
   IconPodium,
   IconSearch,
   IconTerminal2,
+  IconTilde,
   IconTruckDelivery,
   IconWebhook,
-  TablerIcon,
-} from '@tabler/icons';
+  TablerIcon
+} from '@tabler/icons'
 
 function IconConverter({ icon: Icon }: { icon: TablerIcon }) {
-  return <Icon size={15} stroke={1.6} />;
-}
-export interface ProfileSkill {
-  value: string;
-  icon?: JSX.Element;
+  return <Icon size={16} stroke={1.8} />
 }
 
-const profileData = {
+export interface ProfileSkill {
+  value: string
+  icon?: JSX.Element
+}
+type TypeSkillSet = {
+  locales: { [key: string]: string }
+  icon: ReactNode
+  skills: { icon: ReactNode; value: string }[]
+}
+
+const profileData: { skills: { [name: string]: TypeSkillSet } } = {
   skills: {
     languages: {
       locales: {
         en: 'Languages',
         ru: 'Языки',
-        kz: 'Тілдер',
+        kz: 'Тілдер'
       },
       icon: <PaddingIcon />,
       skills: [
         {
           icon: <IconConverter icon={IconBrandJavascript} />,
-          value: 'JavaScript',
+          value: 'JavaScript'
         },
         {
           icon: <IconConverter icon={IconLetterT} />, // TODO
-          value: 'TypeScript',
+          value: 'TypeScript'
         },
         {
           icon: <IconConverter icon={IconBrandPython} />,
-          value: 'Python',
+          value: 'Python'
         },
         {
           icon: <IconConverter icon={IconBrandGoogle} />, // TODO
-          value: 'Go',
+          value: 'Go'
         },
         {
           icon: <IconConverter icon={IconDiamond} />, // TODO
-          value: 'Ruby',
+          value: 'Ruby'
         },
         {
           icon: <IconConverter icon={IconTerminal2} />, // TODO
-          value: 'Bash',
+          value: 'Bash'
         },
         {
           icon: <IconConverter icon={IconTerminal2} />, // TODO
-          value: 'Bash',
-        },
-      ],
+          value: 'Bash'
+        }
+      ]
     },
     frontend: {
       icon: <PaddingIcon />,
       locales: {
-        en: 'Frontend',
+        en: 'Frontend'
       },
       skills: [
         {
           icon: <IconConverter icon={IconBrandReact} />,
-          value: 'React',
+          value: 'React'
         },
         {
           icon: <IconConverter icon={IconBrandNextjs} />,
-          value: 'NextJS',
+          value: 'NextJS'
         },
         {
           icon: <IconConverter icon={IconBrandGatsby} />,
-          value: 'Gatsby',
+          value: 'Gatsby'
         },
         {
           icon: <IconConverter icon={IconLetterR} />,
-          value: 'Remix',
+          value: 'Remix'
         },
         {
           icon: <IconConverter icon={IconBrandHtml5} />,
-          value: 'HTML5',
+          value: 'HTML5'
         },
         {
           icon: <IconConverter icon={IconBrandCss3} />,
-          value: 'CSS3',
+          value: 'CSS3'
         },
         {
           icon: <IconConverter icon={IconBrandRedux} />,
-          value: 'Redux',
+          value: 'Redux'
         },
         {
           icon: <IconConverter icon={IconBrandReact} />, // TODO
-          value: 'React Query',
+          value: 'React Query'
         },
         {
           icon: <IconConverter icon={IconBook} />, // TODO
-          value: 'StoryBook',
+          value: 'StoryBook'
         },
         {
           icon: <IconConverter icon={IconForms} />, // TODO
-          value: 'Formik',
+          value: 'Formik'
+        },
+        {
+          icon: <IconConverter icon={IconBrandReact} />,
+          value: 'react-hook-form'
         },
         {
           icon: <IconConverter icon={IconPackages} />, // TODO
-          value: 'WebPack',
+          value: 'WebPack'
         },
         {
           icon: <IconConverter icon={IconLetterV} />, // TODO
-          value: 'Vite',
+          value: 'Vite'
         },
         {
           icon: <IconConverter icon={IconLetterB} />, // TODO
-          value: 'Babel',
-        },
-      ],
+          value: 'Babel'
+        }
+      ]
     },
     designSystems: {
       icon: <PaddingIcon />,
       locales: {
         en: 'Design Systems',
-        ru: 'Дизайн-Системы',
+        ru: 'Дизайн-Системы'
       },
       skills: [
         {
           icon: <IconConverter icon={IconBrandTailwind} />,
-          value: 'Tailwind',
+          value: 'Tailwind'
         },
         {
           icon: <IconConverter icon={IconLetterM} />,
-          value: 'MUI',
+          value: 'MUI'
         },
         {
           icon: <IconConverter icon={IconLetterM} />,
-          value: 'MantineUI',
+          value: 'MantineUI'
         },
         {
           icon: <IconConverter icon={IconBolt} />,
-          value: 'ChakraUI',
+          value: 'ChakraUI'
         },
         {
           icon: <IconConverter icon={IconBrandBootstrap} />,
-          value: 'Bootstrap',
+          value: 'Bootstrap'
         },
         {
           icon: <IconConverter icon={IconLetterH} />,
-          value: 'HeadlessUI',
+          value: 'HeadlessUI'
         },
         {
           icon: <IconConverter icon={IconLetterR} />,
-          value: 'RadixUI',
+          value: 'RadixUI'
         },
         {
           icon: <StitchesLogoIcon />,
-          value: 'Stitches',
-        },
-      ],
+          value: 'Stitches'
+        }
+      ]
     },
     backend: {
       locales: {
-        en: 'Backend',
+        en: 'Backend'
       },
       icon: <PaddingIcon />,
       skills: [
         {
           icon: <IconConverter icon={IconBrandPrisma} />,
-          value: 'PrismaORM',
+          value: 'PrismaORM'
         },
         {
           icon: <IconConverter icon={IconBrandGoogle} />,
-          value: 'Fiber',
+          value: 'Fiber'
         },
         {
           icon: <IconConverter icon={IconBrandGoogle} />,
-          value: 'Gin',
+          value: 'Gin'
         },
         {
           icon: <IconConverter icon={IconBrandJavascript} />,
-          value: 'NodeJS',
+          value: 'NodeJS'
         },
         {
           icon: <IconConverter icon={IconBrandDjango} />,
-          value: 'Django',
+          value: 'Django'
         },
         {
           icon: <IconConverter icon={IconBrandPython} />,
-          value: 'Flask',
+          value: 'Flask'
         },
         {
           icon: <IconConverter icon={IconBrandJavascript} />,
-          value: 'ExpressJS',
+          value: 'ExpressJS'
         },
         {
           icon: <IconConverter icon={IconDiamond} />, // TODO
-          value: 'Rails',
+          value: 'Rails'
         },
         {
           icon: <IconConverter icon={IconDiamond} />, // TODO
-          value: 'Sinatra',
-        },
-      ],
+          value: 'Sinatra'
+        }
+      ]
     },
     databases: {
       locales: {
         en: 'Databases',
         ru: 'Базы данных',
-        kz: 'Мәліметтер Базасы',
+        kz: 'Мәліметтер Базасы'
       },
       icon: <PaddingIcon />,
       skills: [
         {
           icon: <IconConverter icon={IconLeaf} />, // TODO
-          value: 'MongoDB',
+          value: 'MongoDB'
         },
         {
           icon: <IconConverter icon={IconDatabase} />, // TODO
-          value: 'PostgreSQL',
+          value: 'PostgreSQL'
         },
         {
           icon: <IconConverter icon={IconDatabase} />, // TODO
-          value: 'MySQL',
+          value: 'MySQL'
         },
         {
           icon: <IconConverter icon={IconDatabase} />, // TODO
-          value: 'MariaDB',
+          value: 'MariaDB'
         },
         {
           icon: <IconConverter icon={IconDatabase} />, // TODO
-          value: 'SQLite',
+          value: 'SQLite'
         },
         {
           icon: <IconConverter icon={IconDatabase} />, // TODO
-          value: 'Redis',
+          value: 'Redis'
         },
         {
           icon: <IconConverter icon={IconSearch} />, // TODO
-          value: 'ElasticSearch',
+          value: 'ElasticSearch'
         },
         {
           icon: <IconConverter icon={IconEye} />, // TODO
-          value: 'CassandraDB',
+          value: 'CassandraDB'
         },
         {
           icon: <IconConverter icon={IconLetterS} />, // TODO
-          value: 'ScyllaDB',
-        },
-      ],
+          value: 'ScyllaDB'
+        }
+      ]
     },
     devops: {
       locales: {
-        en: 'DevOps',
+        en: 'DevOps'
       },
       icon: <PaddingIcon />,
       skills: [
         {
           icon: <IconConverter icon={IconBrandGit} />, // TODO
-          value: 'Git',
+          value: 'Git'
+        },
+        {
+          icon: <IconConverter icon={IconBrandGithub} />, // TODO
+          value: 'GitHub Actions'
         },
         {
           icon: <IconConverter icon={IconBrandAmazon} />, // TODO
-          value: 'AWS',
+          value: 'AWS'
         },
         {
           icon: <IconConverter icon={IconTruckDelivery} />, // TODO
-          value: 'CI/CD',
+          value: 'CI/CD'
         },
         {
           icon: <IconConverter icon={IconBrandDocker} />, // TODO
-          value: 'Docker',
+          value: 'Docker'
         },
         {
           icon: <IconConverter icon={IconBrandDocker} />, // TODO
-          value: 'Docker Swarm',
+          value: 'Docker Swarm'
         },
         {
           icon: <IconConverter icon={IconBrandDebian} />, // TODO
-          value: 'Linux',
+          value: 'Linux'
         },
         {
           icon: <IconConverter icon={IconLetterT} />, // TODO
-          value: 'Terraform',
+          value: 'Terraform'
         },
         {
           icon: <IconConverter icon={IconLetterA} />, // TODO
-          value: 'Ansible',
-        },
-      ],
+          value: 'Ansible'
+        }
+      ]
     },
     testing: {
       locales: {
         en: 'Testing',
-        ru: 'Тестирование',
+        ru: 'Тестирование'
       },
       icon: <PaddingIcon />,
       skills: [
         {
           icon: <IconConverter icon={IconLetterJ} />, // TODO
-          value: 'Jest',
+          value: 'Jest'
         },
         {
           icon: <IconConverter icon={IconLetterS} />, // TODO
-          value: 'SoapUI',
+          value: 'SoapUI'
         },
         {
           icon: <IconConverter icon={IconLetterH} />, // TODO
-          value: 'Hoppscotch',
+          value: 'Hoppscotch'
         },
         {
           icon: <IconConverter icon={IconLetterS} />, // TODO
-          value: 'Selenium',
-        },
-      ],
+          value: 'Selenium'
+        }
+      ]
     },
     api: {
       locales: {
-        en: 'API',
+        en: 'API'
       },
       icon: <PaddingIcon />,
       skills: [
         {
           icon: <IconConverter icon={IconLetterR} />, // TODO
-          value: 'REST',
+          value: 'REST'
         },
         {
           icon: <IconConverter icon={IconBrandGraphql} />, // TODO
-          value: 'GraphQL',
+          value: 'GraphQL'
         },
         {
           icon: <IconConverter icon={IconLetterT} />, // TODO
-          value: 'tRPC',
+          value: 'tRPC'
         },
         {
           icon: <IconConverter icon={IconWebhook} />, // TODO
-          value: 'Websockets',
+          value: 'Websockets'
         },
-      ],
+        {
+          icon: <IconConverter icon={IconWebhook} />, // TODO
+          value: 'Sockets.io'
+        },
+        {
+          icon: <IconConverter icon={IconWebhook} />, // TODO
+          value: 'LiveBlocks'
+        }
+      ]
     },
     soft: {
       locales: {
-        en: 'Soft skills-ish',
-        ru: 'Софт скиллы',
+        en: 'Soft skills',
+        ru: 'Софт скиллы'
       },
       icon: <PaddingIcon />,
       skills: [
         {
           icon: <IconConverter icon={IconLetterJ} />, // TODO
-          value: 'Jira',
+          value: 'Jira'
         },
         {
           icon: <IconConverter icon={IconPodium} />, // TODO
-          value: 'Public Speaking',
+          value: 'Public Speaking'
         },
         {
           icon: <IconConverter icon={IconBrandOpenSource} />, // TODO
-          value: 'Open-source',
+          value: 'FOSS Dev'
         },
         {
           icon: <IconConverter icon={IconLetterA} />, // TODO
-          value: 'Agile',
+          value: 'Agile'
         },
-      ],
+        {
+          icon: <IconConverter icon={IconBrandYcombinator} />, // TODO
+          value: 'Startups'
+        }
+      ]
     },
     design: {
       locales: {
         en: 'Design',
-        ru: 'Дизайны',
+        ru: 'Дизайны'
       },
       icon: <PaddingIcon />,
       skills: [
         {
           icon: <IconConverter icon={IconBrandAdobe} />, // TODO
-          value: 'Adobe Pack',
+          value: 'Adobe Pack'
         },
         {
           icon: <IconConverter icon={IconLetterL} />, // TODO
-          value: 'Lunacy',
+          value: 'Lunacy'
         },
         {
           icon: <IconConverter icon={IconLetterD} />, // TODO
-          value: 'Design Systems',
+          value: 'Design Systems'
         },
         {
           icon: <IconConverter icon={IconLetterI} />, // TODO
-          value: 'Inkscape',
+          value: 'Inkscape'
         },
         {
           icon: <IconConverter icon={IconBrandFigma} />, // TODO
-          value: 'Figma',
-        },
-      ],
+          value: 'Figma'
+        }
+      ]
     },
     editing: {
       locales: {
         en: 'Editing',
-        ru: 'Монтаж',
+        ru: 'Монтаж'
       },
       icon: <PaddingIcon />,
       skills: [
         {
           icon: <IconConverter icon={IconBrandAdobe} />, // TODO
-          value: 'Adobe Pack',
+          value: 'Adobe Pack'
         },
         {
           icon: <IconConverter icon={IconLetterG} />, // TODO
-          value: 'Gimp',
+          value: 'Gimp'
         },
         {
           icon: <IconConverter icon={IconLetterK} />, // TODO
-          value: 'Kdenlive',
+          value: 'Kdenlive'
         },
         {
           icon: <IconConverter icon={IconLetterA} />, // TODO
-          value: 'Audacity',
-        },
-      ],
+          value: 'Audacity'
+        }
+      ]
     },
     CMS: {
       locales: {
         en: 'CMS',
-        ru: 'Другие',
+        ru: 'Другие'
       },
       icon: <PaddingIcon />,
       skills: [
         {
           icon: <IconConverter icon={IconLetterD} />, // TODO
-          value: 'DatoCMS',
+          value: 'DatoCMS'
         },
         {
           icon: <IconConverter icon={IconLetterP} />, // TODO
-          value: 'PocketBase',
+          value: 'PocketBase'
         },
         {
           icon: <IconConverter icon={IconBrandWordpress} />, // TODO
-          value: 'WordPress',
+          value: 'WordPress'
         },
         {
           icon: <IconConverter icon={IconBrandWordpress} />, // TODO
-          value: 'WebFlow',
+          value: 'WebFlow'
         },
-      ],
-    },
-  },
-};
-export default profileData;
+        {
+          icon: <IconConverter icon={IconBrandWix} />, // TODO
+          value: 'Wix'
+        },
+        {
+          icon: <IconConverter icon={IconTilde} />, // TODO
+          value: 'Tilda'
+        }
+      ]
+    }
+  }
+}
+export default profileData

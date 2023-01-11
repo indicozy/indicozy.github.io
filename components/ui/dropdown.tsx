@@ -48,7 +48,7 @@ export function MyDropdown(props: TypeDropdown) {
                           active
                             ? 'bg-rose-300 transition dark:bg-zinc-500'
                             : ``
-                        } ` + 'px-1'
+                        } ` + 'text-center w-8'
                       }
                       onClick={() => {
                         item.onClick()

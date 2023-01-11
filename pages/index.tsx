@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { useTranslation } from 'next-export-i18n'
 
+import SkillsAll from '@/components/Skills'
 import { Span } from '@/components/ui/span'
 
 export default function NotionDomainPage() {
@@ -38,6 +39,9 @@ export default function NotionDomainPage() {
             </p>
           </div>
         </div>
+      </div>
+      <div>
+        <SkillsAll />
       </div>
     </>
   )
