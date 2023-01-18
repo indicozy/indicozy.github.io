@@ -52,6 +52,7 @@ import {
   IconPackages,
   IconPodium,
   IconSearch,
+  IconSnowflake,
   IconTerminal2,
   IconTilde,
   IconTruckDelivery,
@@ -317,6 +318,10 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
         {
           icon: <IconConverter icon={IconBrandGit} />, // TODO
           value: 'Git'
+        },
+        {
+          icon: <IconConverter icon={IconSnowflake} />, // TODO
+          value: 'Nix/NixOS'
         },
         {
           icon: <IconConverter icon={IconBrandGithub} />, // TODO
