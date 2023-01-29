@@ -26,11 +26,18 @@ const variantsNavigationItem = {
   }
 }
 
-const NavigationItem: FC<INote> = ({ href, name, tslug }) => {
+const NavigationItem: FC<INote & { toggle: () => void }> = ({
+  href,
+  name,
+  tslug,
+  toggle
+}) => {
   const { t } = useTranslation()
   return (
     <motion.li className='mt-2' variants={variantsNavigationItem}>
-      <Link href={href}>{t(tslug)?.length ? t(tslug) : name}</Link>
+      <Link onClick={() => toggle()} href={href}>
+        {t(tslug)?.length ? t(tslug) : name}
+      </Link>
     </motion.li>
   )
 }
@@ -49,8 +56,9 @@ const variantsNavigation = {
     }
   }
 }
-const Navigation: FC = () => {
+const Navigation: FC<{ toggle: () => void }> = ({ toggle }) => {
   const notes: INote[] = [
+    { href: '/', name: 'Home', tslug: 'navbar.home' },
     { href: '/notes', name: 'Notes', tslug: 'navbar.notes' },
     { href: '/about', name: 'About', tslug: 'navbar.about' },
     { href: '/blog', name: 'Blog', tslug: 'navbar.blog' },
@@ -59,7 +67,7 @@ const Navigation: FC = () => {
   return (
     <motion.ul variants={variantsNavigation}>
       {notes.map((note, i) => (
-        <NavigationItem key={i} {...note} />
+        <NavigationItem key={i} {...note} toggle={() => toggle()} />
       ))}
     </motion.ul>
   )
@@ -88,8 +96,8 @@ export const Sidebar: FC = () => {
       variants={variants}
       className='hidden fixed top-0 left-0 z-10 justify-end items-center h-screen border-r sm:flex bg-background dark:bg-back_dark border-r-foreground dark:border-r-fore_dark'
     >
-      <div className='h-screen py-8 text-4xl mr-8'>
-        <Navigation />
+      <div className='h-screen py-8 text-4xl mr-8 font-domain'>
+        <Navigation toggle={() => toggleOpen()} />
       </div>
       <div className='flex flex-col items-center h-screen justify-between py-8 w-8 px-10'>
         <div className='flex flex-col items-center'>

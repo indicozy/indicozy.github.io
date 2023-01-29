@@ -15,7 +15,7 @@ export default function NotionDomainPage() {
         <title>{t('index.title')}</title>
         <meta name='description' content={t('index.meta')} />
       </Head>
-      <div className='relative ml-2 h-screen sm:ml-32'>
+      <div className='relative h-screen mb-4'>
         <div className='absolute left-0 bottom-40 sm:bottom-20'>
           <h1 className='text-3xl leading-normal sm:text-[6rem] font-domain uppercase font-extrabold whitespace-nowrap'>
             {t('index.hero')}

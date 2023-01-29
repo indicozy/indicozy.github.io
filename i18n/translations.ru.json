@@ -2,6 +2,7 @@
   "lang": "ru",
   "locale": "ru-RU",
   "navbar": {
+    "home": "Главная",
     "notes": "Заметки",
     "about": "Обо Мне",
     "blog": "Блог",

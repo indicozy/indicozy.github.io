@@ -2,6 +2,7 @@
   "lang": "kz",
   "locale": "kz-KZ",
   "navbar": {
+    "home": "Home",
     "notes": "Notes",
     "about": "About",
     "blog": "Blog",

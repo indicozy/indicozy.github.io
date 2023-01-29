@@ -2,6 +2,7 @@
   "lang": "en",
   "locale": "en-US",
   "navbar": {
+    "home": "Home",
     "notes": "Notes",
     "about": "About",
     "blog": "Blog",
