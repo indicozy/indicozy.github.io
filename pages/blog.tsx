@@ -13,7 +13,10 @@ import { NotionMap, NotionPageInfo } from '@/lib/types'
 
 export const getStaticProps = async () => {
   try {
-    const props = await resolveNotionPage(domain)
+    const props = await resolveNotionPage(
+      domain,
+      'b5d6e7cbf6d74100861c42c7f7bd855f'
+    )
     return { props: { props }, revalidate: 600 }
   } catch (err) {
     console.error('page error', domain, err)
@@ -32,6 +35,7 @@ export default function NotionDomainPage({ props }: { props: any }) {
       block.value.type &&
       block.value.type === 'page' ? (
         <div className='py-20 border-b border-b-black dark:border-b-zinc-50'>
+          {' '}
           {block.value.properties.title ? (
             <>
               <Link
@@ -46,23 +50,11 @@ export default function NotionDomainPage({ props }: { props: any }) {
             <></>
           )}
           {/* {block.value.id ? <p>{block.value.id}</p> : <></>} */}
+          {/* {JSON.stringify(block.value)} */}
+          <div>{block.value.properties['KaNt'][0][0]}</div>
           <div className='mt-1'>
-            {block.value.properties['kKTk'] ? (
-              <Badge>{block.value.properties['kKTk'][0][0]}</Badge>
-            ) : (
-              <></>
-            )}
-            {block.value.properties['ea=E'] ? (
-              <>
-                {block.value.properties['ea=E'][0][0].split(',').map((e, i) => (
-                  <Badge key={i}> {e}</Badge>
-                ))}
-              </>
-            ) : (
-              <></>
-            )}
-            {block.value.properties['cKLX'] ? (
-              <Badge>{block.value.properties['cKLX'][0][0]}</Badge>
+            {block.value.properties['Zou\\'] ? (
+              <Badge>{block.value.properties['Zou\\'][0][0]}</Badge>
             ) : (
               <></>
             )}
@@ -138,13 +130,11 @@ export default function NotionDomainPage({ props }: { props: any }) {
   ))
   return (
     <div className='container px-2 mx-auto sm:px-0'>
-      {/* <div>Retrieved at {timeParsed.toLocaleString('kz-KZ')}</div> */}
-
-      {process.env.NODE_ENV === 'development' ? (
+      {/* {process.env.NODE_ENV === 'development' ? (
         <NotionPage {...props} />
       ) : (
         <></>
-      )}
+      )} */}
       {notes}
     </div>
   )
