@@ -18,6 +18,10 @@
   @apply text-foreground dark:text-fore_dark;
 }
 
+.notion-asset-caption {
+  @apply text-foreground dark:text-fore_dark;
+}
+
 .notion-page {
   padding-bottom: calc(max(5vh, 32px)) !important;
   line-height: 1.65;
