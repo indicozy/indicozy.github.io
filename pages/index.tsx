@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 import { useTranslation } from 'next-export-i18n'
 
-import SkillsAll from '@/components/Skills'
 import { Span } from '@/components/ui/span'
 
 export default function NotionDomainPage() {
@@ -15,7 +14,7 @@ export default function NotionDomainPage() {
         <title>{t('index.title')}</title>
         <meta name='description' content={t('index.meta')} />
       </Head>
-      <div className='relative h-screen mb-4'>
+      <div className='relative h-screen'>
         <div className='absolute left-0 bottom-40 sm:bottom-20'>
           <h1 className='text-3xl leading-normal sm:text-[6rem] font-domain uppercase font-extrabold whitespace-nowrap'>
             {t('index.hero')}
@@ -39,9 +38,6 @@ export default function NotionDomainPage() {
             </p>
           </div>
         </div>
-      </div>
-      <div>
-        <SkillsAll />
       </div>
     </>
   )
