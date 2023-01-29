@@ -1,6 +1,12 @@
 {
   "lang": "en",
   "locale": "en-US",
+  "navbar": {
+    "notes": "Notes",
+    "about": "About",
+    "blog": "Blog",
+    "contacts": "Contacts"
+  },
   "index": {
     "title": "Strong programmer from Kazakhstan",
     "meta": "Strong programmer from Kazakhstan",

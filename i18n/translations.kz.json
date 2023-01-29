@@ -1,6 +1,12 @@
 {
   "lang": "kz",
   "locale": "kz-KZ",
+  "navbar": {
+    "notes": "Notes",
+    "about": "About",
+    "blog": "Blog",
+    "contacts": "Contacts"
+  },
   "index": {
     "title": "Мықты программист",
     "meta": "Мықты программист",
