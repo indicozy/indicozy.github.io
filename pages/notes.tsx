@@ -14,7 +14,7 @@ import { NotionMap, NotionPageInfo } from '@/lib/types'
 export const getStaticProps = async () => {
   try {
     const props = await resolveNotionPage(domain)
-    return { props: { props }, revalidate: 600 }
+    return { props: { props }, revalidate: 60 }
   } catch (err) {
     console.error('page error', domain, err)
 

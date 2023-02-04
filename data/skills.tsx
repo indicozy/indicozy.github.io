@@ -32,6 +32,7 @@ import {
   IconDatabase,
   IconDiamond,
   IconEye,
+  IconFlask,
   IconForms,
   IconLeaf,
   IconLetterA,
@@ -109,8 +110,8 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
           value: 'Bash'
         },
         {
-          icon: <IconConverter icon={IconTerminal2} />, // TODO
-          value: 'Bash'
+          icon: <IconConverter icon={IconFlask} />, // TODO
+          value: 'Elixir'
         }
       ]
     },
@@ -414,35 +415,35 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
         }
       ]
     },
-    soft: {
-      locales: {
-        en: 'Soft skills',
-        ru: 'Софт скиллы'
-      },
-      icon: <PaddingIcon />,
-      skills: [
-        {
-          icon: <IconConverter icon={IconLetterJ} />, // TODO
-          value: 'Jira'
-        },
-        {
-          icon: <IconConverter icon={IconPodium} />, // TODO
-          value: 'Public Speaking'
-        },
-        {
-          icon: <IconConverter icon={IconBrandOpenSource} />, // TODO
-          value: 'FOSS Dev'
-        },
-        {
-          icon: <IconConverter icon={IconLetterA} />, // TODO
-          value: 'Agile'
-        },
-        {
-          icon: <IconConverter icon={IconBrandYcombinator} />, // TODO
-          value: 'Startups'
-        }
-      ]
-    },
+    // soft: {
+    //   locales: {
+    //     en: 'Soft skills',
+    //     ru: 'Софт скиллы'
+    //   },
+    //   icon: <PaddingIcon />,
+    //   skills: [
+    //     {
+    //       icon: <IconConverter icon={IconLetterJ} />, // TODO
+    //       value: 'Jira'
+    //     },
+    //     {
+    //       icon: <IconConverter icon={IconPodium} />, // TODO
+    //       value: 'Public Speaking'
+    //     },
+    //     {
+    //       icon: <IconConverter icon={IconBrandOpenSource} />, // TODO
+    //       value: 'FOSS Dev'
+    //     },
+    //     {
+    //       icon: <IconConverter icon={IconLetterA} />, // TODO
+    //       value: 'Agile'
+    //     },
+    //     {
+    //       icon: <IconConverter icon={IconBrandYcombinator} />, // TODO
+    //       value: 'Startups'
+    //     }
+    //   ]
+    // },
     design: {
       locales: {
         en: 'Design',
