@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
+import { useWindowSize } from 'react-use'
+
 import { Header } from './header'
 import { Sidebar } from './sidebar'
 import { StreamlinesFull } from './streamlines-draw'
@@ -28,11 +30,16 @@ export const Layout = ({ children }) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.asPath])
+  const { width } = useWindowSize()
   return (
     <>
       <StreamlinesFull />
-      <Header isRouterLoading={isRouterLoading} />
-      <Sidebar isRouterLoading={isRouterLoading} />
+      {width < 768 ? (
+        <Header isRouterLoading={isRouterLoading} />
+      ) : (
+        <Sidebar isRouterLoading={isRouterLoading} />
+      )}
+
       <main className='mt-20 sm:mt-0 mx-2 sm:mx-56'>{children}</main>
     </>
   )

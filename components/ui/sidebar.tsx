@@ -23,7 +23,11 @@ const variantsNavigationItem = {
   closed: {
     opacity: 0,
     x: -100
-  }
+  },
+  loading: () => ({
+    opacity: 0,
+    x: -100
+  })
 }
 
 const NavigationItem: FC<INote & { toggle: () => void }> = ({
@@ -43,10 +47,16 @@ const NavigationItem: FC<INote & { toggle: () => void }> = ({
 }
 
 const variantsNavigation = {
+  loading: () => ({
+    // width: '100vw',
+    transition: {
+      delay: 0
+    }
+  }),
   open: {
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.2
+      delayChildren: 0.1
     }
   },
   closed: {
@@ -77,13 +87,13 @@ const variants = {
   loading: () => ({
     width: '100vw',
     transition: {
-      delay: 0.4
+      delay: 0.2
     }
   }),
   closed: () => ({
     width: '5rem',
     transition: {
-      delay: 0.4
+      delay: 0.3
     }
   }),
   open: () => ({

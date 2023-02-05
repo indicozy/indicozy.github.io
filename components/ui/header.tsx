@@ -24,6 +24,10 @@ const variantsNavigationItem = {
   closed: {
     opacity: 0,
     x: 100
+  },
+  loading: {
+    opacity: 0,
+    x: 100
   }
 }
 
@@ -47,7 +51,7 @@ const variantsNavigation = {
   open: {
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.2
+      delayChildren: 0.1
     }
   },
   closed: {
@@ -55,7 +59,8 @@ const variantsNavigation = {
       staggerChildren: 0.05,
       staggerDirection: -1
     }
-  }
+  },
+  loading: {}
 }
 const Navigation: FC<{ toggle: () => void }> = ({ toggle }) => {
   const notes: INote[] = [
@@ -78,7 +83,7 @@ const variants = {
   loading: () => ({
     height: '100vh',
     transition: {
-      delay: 0.4
+      delay: 0.3
     }
   }),
   closed: () => ({
