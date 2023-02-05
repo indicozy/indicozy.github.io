@@ -32,7 +32,7 @@
     "@keyvhq/redis": "^1.6.21",
     "@radix-ui/react-icons": "^1.1.1",
     "@react-icons/all-files": "^4.1.0",
-    "@tabler/icons": "2.2.0",
+    "@tabler/icons": "1.119.0",
     "@vercel/og": "^0.0.21",
     "classnames": "^2.3.2",
     "date-fns": "^2.29.3",
