@@ -74,6 +74,12 @@ const Navigation: FC<{ toggle: () => void }> = ({ toggle }) => {
 }
 
 const variants = {
+  loading: () => ({
+    width: '100vw',
+    transition: {
+      delay: 0.4
+    }
+  }),
   closed: () => ({
     width: '5rem',
     transition: {
@@ -85,14 +91,14 @@ const variants = {
   })
 }
 
-export const Sidebar: FC = () => {
+export const Sidebar = ({ isRouterLoading }: { isRouterLoading: boolean }) => {
   const { t } = useTranslation()
   const [isOpen, toggleOpen] = useCycle(false, true)
 
   return (
     <motion.aside
       initial={'closed'}
-      animate={isOpen ? 'open' : 'closed'}
+      animate={isRouterLoading ? 'loading' : isOpen ? 'open' : 'closed'}
       variants={variants}
       className='hidden fixed top-0 left-0 z-10 justify-end items-center h-screen border-r sm:flex bg-background dark:bg-back_dark border-r-foreground dark:border-r-fore_dark'
     >

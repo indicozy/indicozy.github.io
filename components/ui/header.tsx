@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { FC } from 'react'
+import { useRouter } from 'next/router'
+import { FC, useEffect, useState } from 'react'
 
 import { IconMenu2 } from '@tabler/icons'
 import { motion, useCycle } from 'framer-motion'
@@ -74,6 +75,12 @@ const Navigation: FC<{ toggle: () => void }> = ({ toggle }) => {
 }
 
 const variants = {
+  loading: () => ({
+    height: '100vh',
+    transition: {
+      delay: 0.4
+    }
+  }),
   closed: () => ({
     height: '5rem',
     transition: {
@@ -85,12 +92,12 @@ const variants = {
   })
 }
 
-export const Header = () => {
+export const Header = ({ isRouterLoading }: { isRouterLoading: boolean }) => {
   const [isOpen, toggleOpen] = useCycle(false, true)
   return (
     <motion.header
       initial={'closed'}
-      animate={isOpen ? 'open' : 'closed'}
+      animate={isRouterLoading ? 'loading' : isOpen ? 'open' : 'closed'}
       variants={variants}
       className='container flex fixed top-0 left-0 z-10 flex-col justify-end items-center h-full w-screen border-b border-b-foreground dark:border-b-fore_dark bg-background dark:bg-back_dark sm:px-0 sm:hidden'
     >
