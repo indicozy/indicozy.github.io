@@ -453,7 +453,7 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
       skills: [
         {
           icon: <IconConverter icon={IconBrandAdobe} />, // TODO
-          value: 'Adobe Pack'
+          value: 'Illustrator'
         },
         {
           icon: <IconConverter icon={IconLetterL} />, // TODO
@@ -482,7 +482,23 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
       skills: [
         {
           icon: <IconConverter icon={IconBrandAdobe} />, // TODO
-          value: 'Adobe Pack'
+          value: 'Photoshop'
+        },
+        {
+          icon: <IconConverter icon={IconBrandAdobe} />, // TODO
+          value: 'Lightroom'
+        },
+        {
+          icon: <IconConverter icon={IconBrandAdobe} />, // TODO
+          value: 'Premiere Pro'
+        },
+        {
+          icon: <IconConverter icon={IconBrandAdobe} />, // TODO
+          value: 'After Effects'
+        },
+        {
+          icon: <IconConverter icon={IconBrandAdobe} />, // TODO
+          value: 'Audacity'
         },
         {
           icon: <IconConverter icon={IconLetterG} />, // TODO
@@ -497,40 +513,40 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
           value: 'Audacity'
         }
       ]
-    },
-    CMS: {
-      locales: {
-        en: 'CMS',
-        ru: 'Другие'
-      },
-      icon: <PaddingIcon />,
-      skills: [
-        {
-          icon: <IconConverter icon={IconLetterD} />, // TODO
-          value: 'DatoCMS'
-        },
-        {
-          icon: <IconConverter icon={IconLetterP} />, // TODO
-          value: 'PocketBase'
-        },
-        {
-          icon: <IconConverter icon={IconBrandWordpress} />, // TODO
-          value: 'WordPress'
-        },
-        {
-          icon: <IconConverter icon={IconBrandWordpress} />, // TODO
-          value: 'WebFlow'
-        },
-        {
-          icon: <IconConverter icon={IconBrandWix} />, // TODO
-          value: 'Wix'
-        },
-        {
-          icon: <IconConverter icon={IconTilde} />, // TODO
-          value: 'Tilda'
-        }
-      ]
     }
+    // CMS: {
+    //   locales: {
+    //     en: 'CMS',
+    //     ru: 'Другие'
+    //   },
+    //   icon: <PaddingIcon />,
+    //   skills: [
+    //     {
+    //       icon: <IconConverter icon={IconLetterD} />, // TODO
+    //       value: 'DatoCMS'
+    //     },
+    //     {
+    //       icon: <IconConverter icon={IconLetterP} />, // TODO
+    //       value: 'PocketBase'
+    //     },
+    //     {
+    //       icon: <IconConverter icon={IconBrandWordpress} />, // TODO
+    //       value: 'WordPress'
+    //     },
+    //     {
+    //       icon: <IconConverter icon={IconBrandWordpress} />, // TODO
+    //       value: 'WebFlow'
+    //     },
+    //     {
+    //       icon: <IconConverter icon={IconBrandWix} />, // TODO
+    //       value: 'Wix'
+    //     },
+    //     {
+    //       icon: <IconConverter icon={IconTilde} />, // TODO
+    //       value: 'Tilda'
+    //     }
+    //   ]
+    // }
   }
 }
 export default profileData
