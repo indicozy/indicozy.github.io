@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { useTranslation } from 'next-export-i18n'
 
+import SubscribeForm from '@/components/SubscribeForm'
 import { Span } from '@/components/ui/span'
 
 export default function NotionDomainPage() {
@@ -34,6 +35,7 @@ export default function NotionDomainPage() {
           </div>
         </div>
       </div>
+      <SubscribeForm />
     </>
   )
 }
