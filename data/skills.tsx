@@ -19,6 +19,7 @@ import {
   IconBrandGraphql,
   IconBrandHtml5,
   IconBrandJavascript,
+  IconBrandKotlin,
   IconBrandNextjs,
   IconBrandOpenSource,
   IconBrandPrisma,
@@ -85,6 +86,10 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
       },
       icon: <PaddingIcon />,
       skills: [
+        {
+          icon: <IconConverter icon={IconBrandKotlin} />,
+          value: 'Kotlin'
+        },
         {
           icon: <IconConverter icon={IconBrandJavascript} />,
           value: 'JavaScript'
@@ -283,6 +288,10 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
         {
           icon: <IconConverter icon={IconDatabase} />, // TODO
           value: 'MySQL'
+        },
+        {
+          icon: <IconConverter icon={IconDatabase} />, // TODO
+          value: 'neo4j'
         },
         {
           icon: <IconConverter icon={IconDatabase} />, // TODO
