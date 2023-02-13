@@ -2,18 +2,14 @@ import Link from 'next/link'
 import { FC } from 'react'
 
 import { IconMenu2 } from '@tabler/icons'
+import { navigation } from 'data/navigation'
+import { INote } from 'data/navigation'
 import { motion, useCycle } from 'framer-motion'
 import { useTranslation } from 'next-export-i18n'
 
 import { LanguageSwitcherMenu } from '../language-switcher-menu'
 import { Logo } from './logo'
 import ThemeToggler from './theme-toggle'
-
-type INote = {
-  href: string
-  name: string
-  tslug: string
-}
 
 const variantsNavigationItem = {
   open: {
@@ -67,16 +63,9 @@ const variantsNavigation = {
   }
 }
 const Navigation: FC<{ toggle: () => void }> = ({ toggle }) => {
-  const notes: INote[] = [
-    { href: '/', name: 'Home', tslug: 'navbar.home' },
-    { href: '/notes', name: 'Notes', tslug: 'navbar.notes' },
-    { href: '/about', name: 'About', tslug: 'navbar.about' },
-    { href: '/blog', name: 'Blog', tslug: 'navbar.blog' },
-    { href: '/contacts', name: 'Contacts', tslug: 'navbar.contacts' }
-  ]
   return (
     <motion.ul variants={variantsNavigation}>
-      {notes.map((note, i) => (
+      {navigation.map((note, i) => (
         <NavigationItem key={i} {...note} toggle={() => toggle()} />
       ))}
     </motion.ul>
