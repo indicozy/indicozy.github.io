@@ -30,7 +30,9 @@ export default function NotionDomainPage() {
               <Span>Fullstack developer</Span>
             </p>
             <p>
-              <Span>Currently learning Kotlin and Go</Span>
+              <Span>
+                Currently learning Machine Learning and Graph-based Databases
+              </Span>
             </p>
           </div>
         </div>
