@@ -43,9 +43,148 @@ const Works: FC = () => {
       ],
       image: '/portfolio/op-onai.png'
     },
-
+    {
+      name: 'Op-onai v2 - Social Network for Learners',
+      date: 'August 2022 - September 2022',
+      description:
+        '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
+      status: 'deprecated',
+      link: 'https://github.com/indicozy/cbtb',
+      technologies: [
+        'Python',
+        'python-telegram-bot',
+        'SQLAlchemy',
+        'PostgreSQL'
+      ]
+    },
     {
       name: 'UniConnectBot - social bot for my university',
+      date: 'August 2022 - September 2022',
+      description:
+        '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
+      status: 'deprecated',
+      link: 'https://github.com/indicozy/cbtb',
+      technologies: [
+        'Python',
+        'python-telegram-bot',
+        'SQLAlchemy',
+        'PostgreSQL'
+      ]
+    },
+    {
+      name: 'Project Athena',
+      date: 'August 2022 - September 2022',
+      description:
+        '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
+      status: 'deprecated',
+      link: 'https://github.com/indicozy/cbtb',
+      technologies: [
+        'Python',
+        'python-telegram-bot',
+        'SQLAlchemy',
+        'PostgreSQL'
+      ]
+    },
+    {
+      name: 'T-shirt design for JezGrads',
+      date: 'August 2022 - September 2022',
+      description:
+        '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
+      status: 'deprecated',
+      link: 'https://github.com/indicozy/cbtb',
+      technologies: [
+        'Python',
+        'python-telegram-bot',
+        'SQLAlchemy',
+        'PostgreSQL'
+      ]
+    },
+    {
+      name: 'CodeW Website',
+      date: 'August 2022 - September 2022',
+      description:
+        '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
+      status: 'deprecated',
+      link: 'https://github.com/indicozy/cbtb',
+      technologies: [
+        'Python',
+        'python-telegram-bot',
+        'SQLAlchemy',
+        'PostgreSQL'
+      ]
+    },
+    {
+      name: 'Telegram bot for Linnux fans',
+      date: 'August 2022 - September 2022',
+      description:
+        '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
+      status: 'deprecated',
+      link: 'https://github.com/indicozy/cbtb',
+      technologies: [
+        'Python',
+        'python-telegram-bot',
+        'SQLAlchemy',
+        'PostgreSQL'
+      ]
+    },
+    {
+      name: 'Qosylike - video conferencing for parties',
+      date: 'August 2022 - September 2022',
+      description:
+        '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
+      status: 'deprecated',
+      link: 'https://github.com/indicozy/cbtb',
+      technologies: [
+        'Python',
+        'python-telegram-bot',
+        'SQLAlchemy',
+        'PostgreSQL'
+      ]
+    },
+    {
+      name: 'Libero Project',
+      date: 'August 2022 - September 2022',
+      description:
+        '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
+      status: 'deprecated',
+      link: 'https://github.com/indicozy/cbtb',
+      technologies: [
+        'Python',
+        'python-telegram-bot',
+        'SQLAlchemy',
+        'PostgreSQL'
+      ]
+    },
+    {
+      name: 'WMTM - Theme Manager for Sway',
+      date: 'August 2022 - September 2022',
+      description:
+        '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
+      status: 'deprecated',
+      link: 'https://github.com/indicozy/cbtb',
+      technologies: [
+        'Python',
+        'python-telegram-bot',
+        'SQLAlchemy',
+        'PostgreSQL'
+      ]
+    },
+    {
+      name: 'Telegram-bot for QWANT',
+      date: 'August 2022 - September 2022',
+      description:
+        '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
+      status: 'deprecated',
+      link: 'https://github.com/indicozy/cbtb',
+      technologies: [
+        'Python',
+        'python-telegram-bot',
+        'SQLAlchemy',
+        'PostgreSQL'
+      ]
+    },
+    {
+      name: 'Website for SmartExport',
       date: 'August 2022 - September 2022',
       description:
         '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
