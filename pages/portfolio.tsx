@@ -18,7 +18,7 @@ const Works: FC = () => {
   const works: iWork[] = [
     {
       name: 'Op-onai - LMS for collaborative coding',
-      date: 'December 2022 - January 2023',
+      date: 'August 2022 - December 2022 - January 2023',
       description:
         'Invite your students and start coding live with teacher, peer-to-peer or in group work. Create your own course with quizzes, coding assignments, and Markdown or Notion integration. Chat with your students in Forum annd Group chats. Deprecated because of SISP: It was a Solution In Search of a Problem.',
       status: 'deprecated',
