@@ -44,6 +44,34 @@ const Works: FC = () => {
       image: '/portfolio/op-onai.png'
     },
     {
+      name: 'YouTube Channel',
+      date: 'August 2022 - September 2022',
+      description:
+        '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
+      status: 'deprecated',
+      link: 'https://github.com/indicozy/cbtb',
+      technologies: [
+        'Python',
+        'python-telegram-bot',
+        'SQLAlchemy',
+        'PostgreSQL'
+      ]
+    },
+    {
+      name: 'Personal blog',
+      date: 'August 2022 - September 2022',
+      description:
+        '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
+      status: 'deprecated',
+      link: 'https://github.com/indicozy/cbtb',
+      technologies: [
+        'Python',
+        'python-telegram-bot',
+        'SQLAlchemy',
+        'PostgreSQL'
+      ]
+    },
+    {
       name: 'Op-onai v2 - Social Network for Learners',
       date: 'August 2022 - September 2022',
       description:
@@ -214,7 +242,9 @@ const Works: FC = () => {
       )}
       <div
         className={`${
-          work.image ? 'border-l pl-8 ml-8' : ''
+          work.image
+            ? 'border-l pl-8 ml-8 border-foreground dark:border-background'
+            : ''
         }  flex flex-col justify-center h-full py-12`}
       >
         <div>

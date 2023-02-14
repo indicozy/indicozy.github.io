@@ -15,6 +15,9 @@ const About: FC = () => {
       />
       <h1 className='text-[8rem] font-domain'>About Me</h1>
       <p>
+        Contributor of Vercel, Linux Mint, Vanilla OS, Pupilfirst and Mantine.
+      </p>
+      <p>
         I like many stuff: Photography, Cinematography, programming, FOSS,
         designs, interior designs, mentoring, management, marketing, sales,
         economics...
