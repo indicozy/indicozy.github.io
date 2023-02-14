@@ -155,6 +155,10 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
           value: 'Redux'
         },
         {
+          icon: <IconConverter icon={IconBrandRedux} />,
+          value: 'Zustand'
+        },
+        {
           icon: <IconConverter icon={IconBrandReact} />, // TODO
           value: 'React Query'
         },
@@ -284,6 +288,10 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
         {
           icon: <IconConverter icon={IconDatabase} />, // TODO
           value: 'PostgreSQL'
+        },
+        {
+          icon: <IconConverter icon={IconDatabase} />, // TODO
+          value: 'LevelDB'
         },
         {
           icon: <IconConverter icon={IconDatabase} />, // TODO
