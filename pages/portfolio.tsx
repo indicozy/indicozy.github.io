@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { FC } from 'react'
 
 import { Badge } from '@/components/ui/badge'
@@ -7,6 +8,7 @@ interface iWork {
   date: string
   description: string
   image?: string
+  alt?: string
   status: 'deprecated' | 'active' | 'in progress'
   link?: string
   technologies: string[]
@@ -21,13 +23,23 @@ const Works: FC = () => {
         'Invite your students and start coding live with teacher, peer-to-peer or in group work. Create your own course with quizzes, coding assignments, and Markdown or Notion integration. Chat with your students in Forum annd Group chats. Deprecated because of SISP: It was a Solution In Search of a Problem.',
       status: 'deprecated',
       link: 'https://op-onai.kz',
-      technologies: ['bruh']
+      technologies: ['bruh'],
+      image: '/portfolio/op-onai.png'
     }
   ]
   const WorkItems = works.map((work, i) => (
     <div key={i} className='flex flex-row flex-nowrap'>
       <div className='min-w-[24rem]'>
-        <div>Bruh</div>
+        {work.image ? (
+          <Image
+            src={work.image}
+            width={600}
+            height={600}
+            alt={work.alt || 'alt'}
+          />
+        ) : (
+          <div>Bruh</div>
+        )}
       </div>
       <div>
         <div className='text-4xl'>{work.name}</div>

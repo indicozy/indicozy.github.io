@@ -10,5 +10,5 @@ export const navigation: INote[] = [
   { href: '/about', name: 'About', tslug: 'navbar.about' },
   { href: '/blog', name: 'Blog', tslug: 'navbar.blog' },
   { href: '/contacts', name: 'Contacts', tslug: 'navbar.contacts' },
-  { href: '/works', name: 'Contacts', tslug: 'navbar.works' }
+  { href: '/portfolio', name: 'Portfolio', tslug: 'navbar.portfolio' }
 ]
