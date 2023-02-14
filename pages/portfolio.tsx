@@ -55,7 +55,7 @@ const Works: FC = () => {
             ))}
           </div>
         </div>
-        <a className='' href={work.link}>
+        <a className='px-2 py-1 text-sm border rounded-xl' href={work.link}>
           Link
         </a>
       </div>
