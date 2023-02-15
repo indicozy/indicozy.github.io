@@ -318,6 +318,10 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
           value: 'ElasticSearch'
         },
         {
+          icon: <IconConverter icon={IconSearch} />, // TODO
+          value: 'Kibana'
+        },
+        {
           icon: <IconConverter icon={IconEye} />, // TODO
           value: 'CassandraDB'
         },
