@@ -227,9 +227,9 @@ const Works: FC = () => {
     }
   ]
   const WorkItems = works.map((work, i) => (
-    <div key={i} className='flex flex-row flex-nowrap my-8'>
+    <div key={i} className='flex flex-col md:flex-row flex-nowrap my-8'>
       {work.image ? (
-        <div className='min-w-[24rem] flex items-center justify-start'>
+        <div className='w-full flex items-center justify-start'>
           <Image
             src={work.image}
             width={600}
@@ -243,24 +243,24 @@ const Works: FC = () => {
       <div
         className={`${
           work.image
-            ? 'border-l pl-8 ml-8 border-foreground dark:border-background'
+            ? 'border-t mt-8 pt-8 md:mt-0 md:pt-0 md:border-t-0 md:border-l md:pl-8 md:ml-8 border-foreground dark:border-background'
             : ''
         }  flex flex-col justify-center h-full py-12`}
       >
         <div>
           <div className='text-4xl'>{work.name}</div>
-          <div className='text-sm mb-4'>{work.date}</div>
-          <div className='flex space-x-2 flex-wrap'>
+          <div className='text-sm '>{work.date}</div>
+          <div className='mb-4'>
+            Status: <span className='font-bold text-lg'>{work.status}</span>
+          </div>
+          <div className='flex flex-wrap'>
             {work.technologies.map((tech, indexTech) => (
-              <Badge rounded='full' key={indexTech}>
+              <Badge rounded='full' key={indexTech} margin='2'>
                 {tech}
               </Badge>
             ))}
           </div>
-          <div>{work.description}</div>
-          <div>
-            Status: <span className='font-bold text-lg'>{work.status}</span>
-          </div>
+          <div className='my-4'>{work.description}</div>
           <div className='mt-2'>
             <a
               className='px-6 py-2 border border-zinc-300 dark:border-zinc-500 rounded-lg bg-zinc-50 dark:bg-zinc-700'
