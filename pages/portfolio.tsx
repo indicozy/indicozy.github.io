@@ -245,9 +245,9 @@ const Works: FC = () => {
           work.image
             ? 'border-t mt-8 pt-8 md:mt-0 md:pt-0 md:border-t-0 md:border-l md:pl-8 md:ml-8 border-foreground dark:border-background'
             : ''
-        }  flex flex-col justify-center h-full py-12`}
+        }  flex flex-col justify-center h-full`}
       >
-        <div>
+        <div className='my-12'>
           <div className='text-4xl'>{work.name}</div>
           <div className='text-sm '>{work.date}</div>
           <div className='mb-4'>
