@@ -87,7 +87,7 @@ export const Streamlines = () => {
 
 export const StreamlinesFull = () => {
   return (
-    <div className='fixed w-screen h-screen z-[-1]'>
+    <div className='fixed w-screen h-screen z-[-1] top-0 left-0'>
       <Streamlines />
     </div>
   )
