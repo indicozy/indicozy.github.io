@@ -229,7 +229,7 @@ const Works: FC = () => {
   const WorkItems = works.map((work, i) => (
     <div key={i} className='flex flex-col md:flex-row flex-nowrap my-8'>
       {work.image ? (
-        <div className='w-full flex items-center justify-start'>
+        <div className='min-w-[18rem] w-full flex items-center justify-start'>
           <Image
             src={work.image}
             width={600}
