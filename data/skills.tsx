@@ -30,6 +30,7 @@ import {
   IconBrandWix,
   IconBrandWordpress,
   IconBrandYcombinator,
+  IconBuildingCircus,
   IconDatabase,
   IconDiamond,
   IconEye,
@@ -163,6 +164,10 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
           value: 'React Query'
         },
         {
+          icon: <IconConverter icon={IconBuildingCircus} />,
+          value: 'Capacitor'
+        },
+        {
           icon: <IconConverter icon={IconBook} />, // TODO
           value: 'StoryBook'
         },
@@ -198,6 +203,10 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
         {
           icon: <IconConverter icon={IconBrandTailwind} />,
           value: 'Tailwind'
+        },
+        {
+          icon: <IconConverter icon={IconBuildingCircus} />,
+          value: 'Ionic Components'
         },
         {
           icon: <IconConverter icon={IconLetterM} />,
