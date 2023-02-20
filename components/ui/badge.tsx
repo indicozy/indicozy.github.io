@@ -17,7 +17,9 @@ export const Badge: FC<TypeBadge> = ({ children, icon, rounded, margin }) => {
         margin ? 'mr-' + margin : ''
       }`}
     >
-      <div className='mr-1'>{icon}</div>
+      <div className='mr-1 w-4 h-4 flex items-center justify-center'>
+        {icon}
+      </div>
       {children}
     </span>
   )
