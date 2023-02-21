@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { FC } from 'react'
 
 import { avatarImg, contributions } from 'data/contributions'
@@ -30,20 +29,15 @@ const About: FC = () => {
       <div className='mt-20'>
         <p className='text-6xl font-domain font-bold'>Contributed to:</p>
         {contributions.map((c, i) => (
-          <Link href={`https://github.com/${c.name}`} key={i}>
-            <Badge
-              icon={
-                <Image
-                  src={avatarImg + c.img}
-                  width={300}
-                  height={300}
-                  alt=''
-                />
-              }
-            >
-              {c.name}
-            </Badge>
-          </Link>
+          <Badge
+            key={i}
+            href={`https://github.com/${c.name}`}
+            icon={
+              <Image src={avatarImg + c.img} width={300} height={300} alt='' />
+            }
+          >
+            {c.name}
+          </Badge>
         ))}
       </div>
       <div className='mt-20'>
