@@ -9,6 +9,8 @@ import { Span } from '@/components/ui/span'
 export default function NotionDomainPage() {
   const { t } = useTranslation()
 
+  // Scopus / Web of Science
+
   return (
     <>
       <Head>
@@ -17,7 +19,7 @@ export default function NotionDomainPage() {
       </Head>
       <div className='relative h-screen'>
         <div className='absolute left-0 bottom-40 sm:bottom-20'>
-          <h1 className='text-2xl leading-normal sm:text-4xl md:text-6xl lg:text-[4rem]  font-domain uppercase font-extrabold whitespace-nowrap'>
+          <h1 className='text-2xl leading-normal sm:text-4xl md:text-6xl lg:text-[4rem]  font-domain uppercase font-bold whitespace-nowrap'>
             {t('index.hero')}
             <br />
             <span className=''>{t('index.hero2')}</span>

@@ -1,15 +1,15 @@
 @font-face {
-  font-family: 'Steinbeck';
-  src: url('/fonts/steinbeck/regular.ttf');
+  font-family: 'TT Runs';
+  src: url('/fonts/runs/variable.ttf');
   format: ('ttf');
-  font-display: swap;
-  font-weight: 400;
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Atyp Regular Variable';
-  src: url('/fonts/atyp/variable.ttf');
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/norms/Regular.ttf');
   format: ('ttf');
   font-display: swap;
   font-weight: 400;

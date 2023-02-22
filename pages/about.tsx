@@ -1,7 +1,8 @@
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
-import { FC } from 'react'
+import { FC, Suspense } from 'react'
 
+import { PDFDownloadLink } from '@react-pdf/renderer'
 import { avatarImg, contributions } from 'data/contributions'
 import { useTranslation } from 'next-export-i18n'
 
@@ -9,8 +10,15 @@ import SkillsAll from '@/components/Skills'
 import { Badge } from '@/components/ui/badge'
 
 const DynamicPdf = dynamic(() => import('../components/ReactPdf'), {
-  loading: () => <>Loading...</>
+  suspense: true
 })
+
+const DynamicPdfDownloadLink = dynamic(
+  () => import('../components/ReactPdfDownload'),
+  {
+    suspense: true
+  }
+)
 
 const About: FC = () => {
   const { t } = useTranslation()
@@ -24,7 +32,15 @@ const About: FC = () => {
         alt='Burkit Karlibay'
       />
       <h1 className='text-[8rem] font-domain'>About Me</h1>
-      <DynamicPdf t={t} />
+      <div className='mb-4'>
+        <Suspense fallback={<div>Loading...</div>}>
+          <DynamicPdfDownloadLink t={t} />
+        </Suspense>
+      </div>
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <DynamicPdf t={t} />
+      </Suspense>
       <p>
         I like many stuff: Photography, Cinematography, programming, FOSS,
         designs, interior designs, mentoring, management, marketing, sales,

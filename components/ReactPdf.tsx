@@ -3,6 +3,7 @@ import React, { FC, ReactNode } from 'react'
 import {
   Document,
   Font,
+  PDFDownloadLink,
   PDFViewer,
   Page,
   StyleSheet,
@@ -11,9 +12,16 @@ import {
 } from '@react-pdf/renderer'
 
 Font.register({
-  family: 'Atyp Regular Variable',
+  family: 'TT Runs',
   fonts: [
-    { src: '/fonts/atyp/variable.ttf' } // font-style: normal, font-weight: normal
+    { src: '/fonts/runs/variable.ttf' } // font-style: normal, font-weight: normal
+  ]
+})
+
+Font.register({
+  family: 'TT Norms Pro',
+  fonts: [
+    { src: '/fonts/norms/Regular.ttf' } // font-style: normal, font-weight: normal
   ]
 })
 
@@ -29,8 +37,7 @@ const ViewSection: FC<{ children: ReactNode; sidebar: string }> = ({
             transform: 'rotate(90deg) translate(128px, 110px)',
             fontSize: 8,
             textTransform: 'uppercase',
-            fontWeight: 'bold',
-            fontFamily: 'Atyp Regular Variable'
+            fontWeight: 'bold'
           }}
         >
           {sidebar}
@@ -50,7 +57,7 @@ const TextSection: FC<{ children: ReactNode }> = ({ children }) => {
 }
 
 // Create Document Component
-const MyDocument = ({ t }) => {
+export const MyDocument = ({ t }) => {
   return (
     <Document>
       <Page
@@ -59,7 +66,7 @@ const MyDocument = ({ t }) => {
           backgroundColor: '#ece7e1'
         }}
       >
-        <View>
+        <View style={{ fontFamily: 'TT Norms Pro' }}>
           <View style={{ height: 0 }}>
             <Text
               style={{
@@ -88,10 +95,17 @@ const MyDocument = ({ t }) => {
               <View
                 style={{
                   flexBasis: 1,
-                  flexGrow: 1
+                  flexGrow: 1,
+                  fontFamily: 'TT Runs'
                 }}
               >
-                <Text style={{ fontSize: 30 }}>{t('name')}</Text>
+                <Text
+                  style={{
+                    fontSize: 30
+                  }}
+                >
+                  {t('name')}
+                </Text>
                 <Text style={{ fontSize: 10 }}>Frontend Engineer</Text>
                 <Text style={{ fontSize: 10 }}>indicozy.vercel.app</Text>
               </View>
@@ -162,4 +176,5 @@ const Pdf = ({ t }) => {
     </PDFViewer>
   )
 }
+
 export default Pdf
