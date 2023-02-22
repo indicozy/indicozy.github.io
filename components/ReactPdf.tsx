@@ -14,7 +14,7 @@ import {
 Font.register({
   family: 'TT Runs',
   fonts: [
-    { src: '/fonts/runs/variable.ttf' } // font-style: normal, font-weight: normal
+    { src: '/fonts/runs/Regular.ttf' } // font-style: normal, font-weight: normal
   ]
 })
 
@@ -30,14 +30,16 @@ const ViewSection: FC<{ children: ReactNode; sidebar: string }> = ({
   sidebar
 }) => {
   return (
-    <View style={{ minHeight: 70, backgroundColor: 'red' }}>
+    <View style={{ minHeight: 80, backgroundColor: 'red' }}>
       <View>
         <Text
           style={{
-            transform: 'rotate(90deg) translate(128px, 110px)',
-            fontSize: 8,
+            transform: 'rotate(90deg) translate(130px, 110px)',
+            fontSize: 7,
+            fontFamily: 'TT Runs',
             textTransform: 'uppercase',
-            fontWeight: 'bold'
+            letterSpacing: 1.1,
+            fontWeight: 700
           }}
         >
           {sidebar}

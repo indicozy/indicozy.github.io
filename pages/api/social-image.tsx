@@ -7,11 +7,11 @@ import { api, apiHost, rootNotionPageId } from '@/lib/config'
 import { NotionPageInfo } from '@/lib/types'
 
 const NormsFontP = fetch(
-  new URL('../../public/fonts/norms/variable.ttf', import.meta.url)
+  new URL('../../public/fonts/norms/Regular.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer())
 
 const RunsFontP = fetch(
-  new URL('../../public/fonts/runs/regular.ttf', import.meta.url)
+  new URL('../../public/fonts/runs/Regular.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer())
 
 export const config = {
