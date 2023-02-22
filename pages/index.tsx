@@ -19,17 +19,17 @@ export default function NotionDomainPage() {
       </Head>
       <div className='relative h-screen'>
         <div className='absolute left-0 bottom-40 sm:bottom-20'>
-          <h1 className='text-2xl leading-normal sm:text-4xl md:text-6xl lg:text-[4rem]  font-domain uppercase font-bold whitespace-nowrap'>
+          <h1 className='text-2xl leading-normal sm:text-4xl md:text-6xl lg:text-[4rem]  font-runs uppercase font-bold whitespace-nowrap'>
             {t('index.hero')}
             <br />
             <span className=''>{t('index.hero2')}</span>
           </h1>
           <div className='leading-[3]'>
-            <p className='text-xl font-bold uppercase sm:text-2xl font-domain'>
+            <p className='text-xl font-bold uppercase sm:text-2xl font-runs'>
               <Span>{t('name')}</Span>
             </p>
             <p>
-              <Span>Fullstack developer</Span>
+              <Span>Frontend Engineer</Span>
             </p>
             <p>
               <Span>

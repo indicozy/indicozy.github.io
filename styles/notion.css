@@ -172,7 +172,7 @@
 }
 
 .notion-title {
-  @apply text-center block font-domain;
+  @apply text-center block font-runs;
 }
 
 .notion-collection-row {
@@ -382,11 +382,11 @@
 }
 
 .notion-page-content-inner > * {
-  @apply bg-background dark:bg-back_dark font-atyp;
+  @apply bg-background dark:bg-back_dark font-norms;
 }
 
 .notion-h {
-  @apply font-domain;
+  @apply font-runs;
 }
 .notion-header-anchor {
   @apply top-0;
@@ -403,10 +403,10 @@
 }
 
 .notion-aside-table-of-contents {
-  @apply bg-background dark:bg-back_dark font-atyp;
+  @apply bg-background dark:bg-back_dark font-norms;
 }
 .notion-aside-table-of-contents-header {
-  @apply font-domain;
+  @apply font-runs;
 }
 
 .notion-code,
@@ -416,7 +416,7 @@ pre[class*='language-'] {
 }
 
 .notion-collection-page-properties {
-  @apply font-atyp overflow-x-hidden;
+  @apply font-norms overflow-x-hidden;
 }
 .notion-collection-row {
   @apply py-0 mb-4 border-0;
@@ -441,10 +441,10 @@ a.notion-table-of-contents-active-item {
   @apply bg-background dark:bg-back_dark;
 }
 .notion-page {
-  @apply font-atyp;
+  @apply font-norms;
 }
 .notion-collection-header-title {
-  @apply font-domain;
+  @apply font-runs;
 }
 
 .notion-property-multi_select *,

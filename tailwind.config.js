@@ -27,8 +27,8 @@ module.exports = {
     },
     extend: {},
     fontFamily: {
-      domain: ['TT Runs'], // TT Norms Pro, KZ Gropled, KZ Domain Display
-      atyp: ['TT Norms Pro'],
+      runs: ['TT Runs'], // TT Norms Pro, KZ Gropled, KZ Domain Display
+      norms: ['TT Norms Pro'],
       comic: ['Comic Code Ligatures']
     }
   },

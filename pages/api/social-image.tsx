@@ -52,7 +52,7 @@ export default async function OGImage(req: NextRequest) {
           backgroundColor: '#1F2027',
           alignItems: 'center',
           justifyContent: 'center',
-          fontFamily: '"Steinbeck", sans-serif',
+          fontFamily: '"TT Runs", sans-serif',
           color: 'black'
         }}
       >
@@ -159,13 +159,13 @@ export default async function OGImage(req: NextRequest) {
       height: 630,
       fonts: [
         {
-          name: 'Atyp Regular Variable',
+          name: 'TT Norms Pro',
           data: NormsFont,
           style: 'normal',
           weight: 400
         },
         {
-          name: 'Steinbeck',
+          name: 'TT Runs',
           data: RunsFont,
           style: 'normal',
           weight: 400

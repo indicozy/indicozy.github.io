@@ -93,7 +93,7 @@ export const Header = ({ isRouterLoading }: { isRouterLoading: boolean }) => {
       variants={variants}
       className='container flex fixed top-0 left-0 z-10 flex-col justify-end items-center h-full w-screen border-b border-b-foreground dark:border-b-fore_dark bg-background dark:bg-back_dark sm:px-0 sm:hidden transition-colors duration-300'
     >
-      <div className='w-screen text-2xl mr-8 mb-2 font-domain'>
+      <div className='w-screen text-2xl mr-8 mb-2 font-runs'>
         <Navigation toggle={() => toggleOpen()} />
       </div>
       <div className='flex w-screen px-4 justify-between py-4'>

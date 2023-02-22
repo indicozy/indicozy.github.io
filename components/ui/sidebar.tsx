@@ -101,7 +101,7 @@ export const Sidebar = ({ isRouterLoading }: { isRouterLoading: boolean }) => {
       variants={variants}
       className='hidden fixed top-0 left-0 z-10 justify-end items-center h-screen border-r sm:flex bg-background dark:bg-back_dark border-r-foreground dark:border-r-fore_dark transition-colors duration-300'
     >
-      <div className='h-screen py-8 text-4xl mr-8 font-domain'>
+      <div className='h-screen py-8 text-4xl mr-8 font-runs'>
         <Navigation toggle={() => toggleOpen()} />
       </div>
       <div className='flex flex-col items-center h-screen justify-between py-8 w-8 px-10'>
@@ -112,7 +112,7 @@ export const Sidebar = ({ isRouterLoading }: { isRouterLoading: boolean }) => {
           <LanguageSwitcherMenu />
           <ThemeToggler />
         </div>
-        <div className='pt-1 text-2xl font-bold tracking-wider uppercase whitespace-nowrap -rotate-90 font-domain'>
+        <div className='pt-1 text-2xl font-bold tracking-wider uppercase whitespace-nowrap -rotate-90 font-runs'>
           {t('name')}
         </div>
         <Link href='/'>

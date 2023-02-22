@@ -10,7 +10,7 @@ const SkillsAll: FC = () => {
   const { t } = useTranslation()
   return (
     <>
-      <h2 className='mb-6 text-6xl font-bold font-domain'>
+      <h2 className='mb-6 text-6xl font-bold font-runs'>
         {t('skills.header')}
       </h2>
       {Object.entries(skills).map(([key, value], index) => {

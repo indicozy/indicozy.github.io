@@ -39,7 +39,7 @@ export default function NotionDomainPage({ props }: { props: any }) {
           {block.value.properties.title ? (
             <>
               <Link
-                className='inline-block text-2xl font-semibold sm:text-6xl font-domain'
+                className='inline-block text-2xl font-semibold sm:text-6xl font-runs'
                 href={`${block.value.id.replaceAll('-', '')}
                 `}
               >

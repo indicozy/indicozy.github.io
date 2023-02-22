@@ -13,7 +13,7 @@ export default function SubscribeForm() {
         target='_self'
       >
         <div id='mc_embed_signup_scroll'>
-          <h2 className='text-4xl font-domain font-extrabold'>
+          <h2 className='text-4xl font-runs font-extrabold'>
             Подписаться на рассылку
           </h2>
           <div className='text-sm text-zinc-300'>
