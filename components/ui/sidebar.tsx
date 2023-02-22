@@ -34,7 +34,10 @@ const NavigationItem: FC<INote & { toggle: () => void }> = ({
 }) => {
   const { t } = useTranslation()
   return (
-    <motion.li className='mt-2' variants={variantsNavigationItem}>
+    <motion.li
+      className='mt-2 font-normal hover:font-bold transition-[font-weight] duration-150'
+      variants={variantsNavigationItem}
+    >
       <Link onClick={() => toggle()} href={href}>
         {t(tslug)?.length ? t(tslug) : name}
       </Link>
@@ -101,7 +104,7 @@ export const Sidebar = ({ isRouterLoading }: { isRouterLoading: boolean }) => {
       variants={variants}
       className='hidden fixed top-0 left-0 z-10 justify-end items-center h-screen border-r sm:flex bg-background dark:bg-back_dark border-r-foreground dark:border-r-fore_dark transition-colors duration-300'
     >
-      <div className='h-screen py-8 text-4xl mr-8 font-runs'>
+      <div className='h-screen py-8 text-4xl mr-8 font-runs w-[11rem] ml-4'>
         <Navigation toggle={() => toggleOpen()} />
       </div>
       <div className='flex flex-col items-center h-screen justify-between py-8 w-8 px-10'>
@@ -112,7 +115,7 @@ export const Sidebar = ({ isRouterLoading }: { isRouterLoading: boolean }) => {
           <LanguageSwitcherMenu />
           <ThemeToggler />
         </div>
-        <div className='pt-1 text-2xl font-bold tracking-wider uppercase whitespace-nowrap -rotate-90 font-runs'>
+        <div className='pt-1 text-2xl tracking-widest uppercase whitespace-nowrap -rotate-90 font-runs'>
           {t('name')}
         </div>
         <Link href='/'>
