@@ -99,7 +99,7 @@ export const Sidebar = ({ isRouterLoading }: { isRouterLoading: boolean }) => {
       initial={'closed'}
       animate={isRouterLoading ? 'loading' : isOpen ? 'open' : 'closed'}
       variants={variants}
-      className='hidden fixed top-0 left-0 z-10 justify-end items-center h-screen border-r sm:flex bg-background dark:bg-back_dark border-r-foreground dark:border-r-fore_dark'
+      className='hidden fixed top-0 left-0 z-10 justify-end items-center h-screen border-r sm:flex bg-background dark:bg-back_dark border-r-foreground dark:border-r-fore_dark transition-colors duration-300'
     >
       <div className='h-screen py-8 text-4xl mr-8 font-domain'>
         <Navigation toggle={() => toggleOpen()} />
