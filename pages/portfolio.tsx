@@ -248,7 +248,7 @@ const Works: FC = () => {
         }  flex flex-col justify-center h-full`}
       >
         <div className='my-12'>
-          <div className='text-4xl'>{work.name}</div>
+          <div className='text-4xl font-runs'>{work.name}</div>
           <div className='text-sm '>{work.date}</div>
           <div className='mb-4'>
             Status: <span className='font-bold text-lg'>{work.status}</span>
