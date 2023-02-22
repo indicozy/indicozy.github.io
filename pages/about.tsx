@@ -31,7 +31,9 @@ const About: FC = () => {
         height={1000}
         alt='Burkit Karlibay'
       />
-      <h1 className='text-[8rem] font-runs'>About Me</h1>
+      <h1 className='text-[8rem] font-runs font-normal hover:font-bold transition-all'>
+        About Me
+      </h1>
       <div className='mb-4'>
         <Suspense fallback={<div>Loading...</div>}>
           <DynamicPdfDownloadLink t={t} />

@@ -1,8 +1,121 @@
 @font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/norms/ExtraLight.ttf');
+  format: ('ttf');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/norms/Light.ttf');
+  format: ('ttf');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/norms/Thin.ttf');
+  format: ('ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/norms/Regular.ttf');
+  format: ('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/norms/Medium.ttf');
+  format: ('ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/norms/Bold.ttf');
+  format: ('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/norms/ExtraBold.ttf');
+  format: ('ttf');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/norms/Black.ttf');
+  format: ('ttf');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Runs';
+  src: url('/fonts/runs/ExtraLight.ttf');
+  format: ('ttf');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Runs';
+  src: url('/fonts/runs/Light.ttf');
+  format: ('ttf');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Runs';
+  src: url('/fonts/runs/Thin.ttf');
+  format: ('ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
   font-family: 'TT Runs';
   src: url('/fonts/runs/Regular.ttf');
   format: ('ttf');
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Runs';
+  src: url('/fonts/runs/Medium.ttf');
+  format: ('ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Runs';
+  src: url('/fonts/runs/DemiBold.ttf');
+  format: ('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Runs';
+  src: url('/fonts/runs/Bold.ttf');
+  format: ('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Runs';
+  src: url('/fonts/runs/ExtraBold.ttf');
+  format: ('ttf');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Runs';
+  src: url('/fonts/runs/Black.ttf');
+  format: ('ttf');
+  font-weight: 800;
   font-style: normal;
 }
 

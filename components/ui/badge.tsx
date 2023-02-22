@@ -27,7 +27,7 @@ export const Badge: FC<TypeBadge> = ({
   return (
     <Wrapper>
       <span
-        className={`bg-zinc-50 dark:bg-zinc-700 text-sm font-semibold mr-2 px-2.5 py-1 mt-1 hover:px-4 transition-all ${
+        className={`bg-zinc-50 dark:bg-zinc-700 text-sm font-normal hover:font-semibold mr-2 px-2.5 py-1 mt-1 hover:px-4 transition-all ${
           rounded ? 'rounded-' + rounded : 'rounded'
         } inline-flex items-center space-x-4 flex-nowrap ${
           margin ? 'mr-' + margin : ''
