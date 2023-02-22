@@ -1,12 +1,19 @@
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { FC } from 'react'
 
 import { avatarImg, contributions } from 'data/contributions'
+import { useTranslation } from 'next-export-i18n'
 
 import SkillsAll from '@/components/Skills'
 import { Badge } from '@/components/ui/badge'
 
+const DynamicPdf = dynamic(() => import('../components/ReactPdf'), {
+  loading: () => <>Loading...</>
+})
+
 const About: FC = () => {
+  const { t } = useTranslation()
   return (
     <div className='pt-40 relative'>
       <Image
@@ -17,6 +24,7 @@ const About: FC = () => {
         alt='Burkit Karlibay'
       />
       <h1 className='text-[8rem] font-domain'>About Me</h1>
+      <DynamicPdf t={t} />
       <p>
         I like many stuff: Photography, Cinematography, programming, FOSS,
         designs, interior designs, mentoring, management, marketing, sales,
