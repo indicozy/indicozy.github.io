@@ -6,12 +6,12 @@ import { ImageResponse } from '@vercel/og'
 import { api, apiHost, rootNotionPageId } from '@/lib/config'
 import { NotionPageInfo } from '@/lib/types'
 
-const AtypFontP = fetch(
-  new URL('../../public/fonts/atyp/variable.ttf', import.meta.url)
+const NormsFontP = fetch(
+  new URL('../../public/fonts/norms/variable.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer())
 
-const SteinbeckFontFontP = fetch(
-  new URL('../../public/fonts/steinbeck/regular.ttf', import.meta.url)
+const RunsFontP = fetch(
+  new URL('../../public/fonts/runs/regular.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer())
 
 export const config = {
@@ -38,10 +38,7 @@ export default async function OGImage(req: NextRequest) {
   const pageInfo: NotionPageInfo = await pageInfoRes.json()
   console.log(pageInfo)
 
-  const [AtypFont, SteinbeckFont] = await Promise.all([
-    AtypFontP,
-    SteinbeckFontFontP
-  ])
+  const [NormsFont, RunsFont] = await Promise.all([NormsFontP, RunsFontP])
 
   return new ImageResponse(
     (
@@ -163,13 +160,13 @@ export default async function OGImage(req: NextRequest) {
       fonts: [
         {
           name: 'Atyp Regular Variable',
-          data: AtypFont,
+          data: NormsFont,
           style: 'normal',
           weight: 400
         },
         {
           name: 'Steinbeck',
-          data: SteinbeckFont,
+          data: RunsFont,
           style: 'normal',
           weight: 400
         }
