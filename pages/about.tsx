@@ -53,7 +53,9 @@ const About: FC = () => {
         Whether I will succeed or you&apos;ll see in May 2023. See ya.
       </p>
       <div className='mt-20'>
-        <p className='text-6xl font-runs font-bold'>Contributed to:</p>
+        <p className='text-6xl font-runs font-normal hover:font-bold transition-[font-weight]'>
+          Contributed to:
+        </p>
         {contributions.map((c, i) => (
           <Badge
             key={i}

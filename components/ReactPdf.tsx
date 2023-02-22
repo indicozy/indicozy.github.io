@@ -14,14 +14,29 @@ import {
 Font.register({
   family: 'TT Runs',
   fonts: [
-    { src: '/fonts/runs/Regular.ttf' } // font-style: normal, font-weight: normal
+    { src: '/fonts/runs/Thin.ttf', fontWeight: 100 }, // font-style: normal, font-weight: normal
+    { src: '/fonts/runs/ExtraLight.ttf', fontWeight: 200 }, // font-style: normal, font-weight: normal
+    { src: '/fonts/runs/Light.ttf', fontWeight: 300 }, // font-style: normal, font-weight: normal
+    { src: '/fonts/runs/Regular.ttf', fontWeight: 400 }, // font-style: normal, font-weight: normal
+    { src: '/fonts/runs/Medium.ttf', fontWeight: 500 }, // font-style: normal, font-weight: normal
+    { src: '/fonts/runs/DemiBold.ttf', fontWeight: 600 }, // font-style: normal, font-weight: normal
+    { src: '/fonts/runs/Bold.ttf', fontWeight: 700 }, // font-style: normal, font-weight: normal
+    { src: '/fonts/runs/ExtraBold.ttf', fontWeight: 800 }, // font-style: normal, font-weight: normal
+    { src: '/fonts/runs/Black.ttf', fontWeight: 900 } // font-style: normal, font-weight: normal
   ]
 })
 
 Font.register({
   family: 'TT Norms Pro',
   fonts: [
-    { src: '/fonts/norms/Regular.ttf' } // font-style: normal, font-weight: normal
+    { src: '/fonts/norms/Thin.ttf', fontWeight: 100 }, // font-style: normal, font-weight: normal
+    { src: '/fonts/norms/ExtraLight.ttf', fontWeight: 200 }, // font-style: normal, font-weight: normal
+    { src: '/fonts/norms/Light.ttf', fontWeight: 300 }, // font-style: normal, font-weight: normal
+    { src: '/fonts/norms/Regular.ttf', fontWeight: 400 }, // font-style: normal, font-weight: normal
+    { src: '/fonts/norms/Medium.ttf', fontWeight: 500 }, // font-style: normal, font-weight: normal
+    { src: '/fonts/norms/Bold.ttf', fontWeight: 700 }, // font-style: normal, font-weight: normal
+    { src: '/fonts/norms/ExtraBold.ttf', fontWeight: 800 }, // font-style: normal, font-weight: normal
+    { src: '/fonts/norms/Black.ttf', fontWeight: 900 } // font-style: normal, font-weight: normal
   ]
 })
 
@@ -30,23 +45,29 @@ const ViewSection: FC<{ children: ReactNode; sidebar: string }> = ({
   sidebar
 }) => {
   return (
-    <View style={{ minHeight: 80, backgroundColor: 'red' }}>
+    <View style={{ minHeight: 80 }}>
       <View>
         <Text
           style={{
-            transform: 'rotate(90deg) translate(130px, 110px)',
+            transform: 'rotate(90deg) translate(130px, 120px)',
             fontSize: 7,
-            fontFamily: 'TT Runs',
+            // fontFamily: 'TT Runs',
             textTransform: 'uppercase',
-            letterSpacing: 1.1,
-            fontWeight: 700
+            // letterSpacing: 1.1,
+            fontWeight: 600
           }}
         >
+          --------- {'    '}
           {sidebar}
         </Text>
       </View>
       <View
-        style={{ marginLeft: 30, display: 'flex', flexDirection: 'column' }}
+        style={{
+          marginLeft: 20,
+          display: 'flex',
+          flexDirection: 'column',
+          marginRight: 20
+        }}
       >
         {children}
       </View>
@@ -55,8 +76,9 @@ const ViewSection: FC<{ children: ReactNode; sidebar: string }> = ({
 }
 
 const TextSection: FC<{ children: ReactNode }> = ({ children }) => {
-  return <Text style={{ fontSize: 8 }}>{children}</Text>
+  return <Text style={{ fontSize: 8, lineHeight: 1.2 }}>{children}</Text>
 }
+const Br: FC = () => <Text> --------- </Text>
 
 // Create Document Component
 export const MyDocument = ({ t }) => {
@@ -72,8 +94,8 @@ export const MyDocument = ({ t }) => {
           <View style={{ height: 0 }}>
             <Text
               style={{
-                transform: 'rotate(90deg) translate(320px, 270px)',
-                fontSize: 10
+                transform: 'rotate(-90deg) translate(260px, -280px)',
+                fontSize: 6
               }}
             >
               2023
@@ -97,19 +119,24 @@ export const MyDocument = ({ t }) => {
               <View
                 style={{
                   flexBasis: 1,
-                  flexGrow: 1,
-                  fontFamily: 'TT Runs'
+                  flexGrow: 1
                 }}
               >
                 <Text
                   style={{
-                    fontSize: 30
+                    fontSize: 24,
+                    fontFamily: 'TT Runs',
+                    lineHeight: 1,
+                    marginLeft: -1.5,
+                    marginRight: 10
                   }}
                 >
                   {t('name')}
                 </Text>
-                <Text style={{ fontSize: 10 }}>Frontend Engineer</Text>
-                <Text style={{ fontSize: 10 }}>indicozy.vercel.app</Text>
+                <Text style={{ fontSize: 10, textTransform: 'uppercase' }}>
+                  Frontend Engineer
+                </Text>
+                <Text style={{ fontSize: 8 }}>indicozy.vercel.app</Text>
               </View>
               <View
                 style={{
@@ -118,9 +145,9 @@ export const MyDocument = ({ t }) => {
                 }}
               >
                 <Text style={{ fontSize: 10 }}>
-                  I fall in love with products and design thoughtful user
-                  experiences that piece together the big picture with simple,
-                  impactful and shippable solutions focused on the customer.
+                  I am passionate about creating exceptional user experiences by
+                  working with design teams to develop simple, impactful, and
+                  shippable solutions focused on the customer.
                 </Text>
               </View>
             </View>
@@ -135,13 +162,25 @@ export const MyDocument = ({ t }) => {
                   marginRight: 10
                 }}
               >
-                <ViewSection sidebar='education'>
+                <ViewSection sidebar='experience'>
                   <TextSection>
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry
                     standard dummy text ever since the 1500s, when an unknown
                     printer took a galley of type and scrambled it to make a
                     type specimen book.
+                  </TextSection>
+                </ViewSection>
+                <ViewSection sidebar='education'>
+                  <TextSection>
+                    {`NAZARBAYEV UNIVERSITY
+                    BA Degree in Sociology
+                   August 2018 - May 2023`}
+
+                    {`
+                    
+                    JEZKAZGAN KAZAKH-TURKISH LYCEUM
+                   May 2023`}
                   </TextSection>
                 </ViewSection>
               </View>
@@ -155,6 +194,40 @@ export const MyDocument = ({ t }) => {
                 }}
               >
                 <ViewSection sidebar='hard skills'>
+                  <TextSection>
+                    {`FRONTEND (Advanced):
+                    React, Next, Typescript, Solid, Remix, Vite, Svelte,
+                    TailwindCSS, HeadlessUI, Framer Motion, Zustand,
+                    Redux, Jotai, ReactQuery, Axios, Storybook
+
+                    BACKEND (Intermediate):
+                    Python, Go, NodeJS, Elixir, Rust, PrismaORM, Flask,
+                    Django, ExpressJS, Rails, Sinatra, Gin, Fiber, Git
+
+                    DEVOPS (Advanced):
+                    Linux, Open/FreeBSD, Nix/NixOS, Terraform, Bash, Ansible, Docker, CI/CD, Vercel, Grafana, Zabbix
+
+                    DATABASES & API (Advanced):
+                    neo4j, LevelDB, MySQL, PostgreSQL, Cassandra, ScyllaDB, Redis, ElasticSearch, tRPC, REST, GraphQL
+
+                    LOW/HIGH FIDELITY DESIGN (Intermediate):
+                    Wireframing, Sketching, Ideation, User flows, Prototyping, Design specs, Design systems,
+                    Miro, Photoshop, Illustrator, Figma, Inkscape
+
+                    User/Customer Experience (Intermediate):
+                    User Research, Market Research, Usability Testing`}
+                  </TextSection>
+                </ViewSection>
+                <ViewSection sidebar='soft skills'>
+                  <TextSection>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </TextSection>
+                </ViewSection>
+                <ViewSection sidebar='recognition'>
                   <TextSection>
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry
