@@ -5,7 +5,7 @@ import { MyDocument } from './ReactPdf'
 const MyDocumentDownload = ({ t }) => {
   return (
     <PDFDownloadLink
-      className='bg-red-300 px-4 py-2 rounded-sm'
+      className='bg-red-300 px-4 hover:px-8 transition-[padding] py-2 rounded-md'
       document={<MyDocument t={t} />}
       fileName='Burkit-Karlibay-Frontend-Engineer-Resume.pdf'
     >
