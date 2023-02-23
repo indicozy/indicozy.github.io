@@ -31,7 +31,7 @@ const About: FC = () => {
         height={1000}
         alt='Burkit Karlibay'
       />
-      <h1 className='text-[8rem] font-runs font-normal hover:font-bold transition-all'>
+      <h1 className='text-6xl md:text-[8rem] font-runs font-normal hover:font-bold transition-all'>
         About Me
       </h1>
 
@@ -50,7 +50,7 @@ const About: FC = () => {
         </p>
       </div>
       <div className='mt-12'>
-        <p className='text-6xl font-runs font-normal hover:font-bold transition-[font-weight]'>
+        <p className='text-4xl md:text-6xl font-runs font-normal hover:font-bold transition-[font-weight]'>
           Resume:
         </p>
         <div className='mt-4'>
@@ -60,7 +60,7 @@ const About: FC = () => {
         </div>
       </div>
       <div className='mt-20'>
-        <p className='text-6xl font-runs font-normal hover:font-bold transition-[font-weight]'>
+        <p className='text-4xl md:text-6xl font-runs font-normal hover:font-bold transition-[font-weight]'>
           Contributed to:
         </p>
         {contributions.map((c, i) => (

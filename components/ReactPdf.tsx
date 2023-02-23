@@ -195,7 +195,7 @@ export const MyDocument = ({ t }) => {
               >
                 <ViewSection sidebar='projects'>
                   <TextSection>
-                    {`BeLearn (02.2023 - Present)
+                    {`BELEARN (02.2023 - Present)
 `}
 
                     <Link
@@ -215,7 +215,7 @@ export const MyDocument = ({ t }) => {
                   </TextSection>
                   <Br />
                   <TextSection>
-                    {`Op-onai (September 2022 - January 2023)
+                    {`OP-ONAI (September 2022 - January 2023)
 `}
                     <Link
                       style={{
@@ -235,7 +235,7 @@ export const MyDocument = ({ t }) => {
                   </TextSection>
                   <Br />
                   <TextSection>
-                    {`Personal Blog (January 2022 - Present)
+                    {`PERSONAL BLOG (January 2022 - Present)
 `}
                     <Link
                       style={{
@@ -254,7 +254,7 @@ export const MyDocument = ({ t }) => {
                   </TextSection>
                   <Br />
                   <TextSection>
-                    {`TinderBot (August 2022 - September 2022)
+                    {`TINDERBOT (August 2022 - September 2022)
 `}
                     <Link
                       style={{
@@ -293,18 +293,18 @@ export const MyDocument = ({ t }) => {
                 </ViewSection>
                 <ViewSection sidebar='experience'>
                   <TextSection>
-                    {`Jezgrads Foundation (November 2019 - Present)
+                    {`JEZGRADS FOUNDATION (November 2019 - Present)
                       Head of Digitization and Design
 
                       Raised 78 million tenge (~$180,000) for public funding, gathered 500 people into 6 events, collected information of every participant, developed website, WhatsApp bot, designed logo, instagram posts and merch.`}
                   </TextSection>
                   <Br />
-                  <TextSection>{`ACM CodeW (January 2022 - January 2022)
+                  <TextSection>{`ACM CODEW (January 2022 - January 2022)
                   Frontend Developer, codew.kz
 
                   Designed and developed website for Code-Women, ACM Student Chapter. Gathered 200 leads for event.`}</TextSection>
                   <Br />
-                  <TextSection>{`Mentorship (March 2021 - Present)
+                  <TextSection>{`MENTORSHIP (March 2021 - Present)
                   Personal Mentor
 
                   Personally mentored about 50 students on programming basics, frontend, backend and devops. 85% of them finished their projects and 60% found a job in IT.`}</TextSection>
@@ -317,7 +317,7 @@ export const MyDocument = ({ t }) => {
                   </TextSection>
                   <Br />
                   <TextSection>
-                    {`Freelancing (May 2020 - May 2021)
+                    {`FREELANCING (May 2020 - May 2021)
                     Developer`}
                   </TextSection>
                 </ViewSection>
@@ -352,12 +352,12 @@ export const MyDocument = ({ t }) => {
                     Wireframing, Sketching, Ideation, User flows, Prototyping, Design specs, Design systems,
                     Miro, Photoshop, Illustrator, Figma, Inkscape
 
-                    User/Customer Experience (Intermediate):
+                    USER/CUSTOMER EXPERIENCE (Beginner):
                     User Research, Market Research, Usability Testing
 
                     PRODUCT/PROJECT MANAGEMENT (Beginner)
-                    Design Sprints, User Story Mapping, Release Planning, Agile
-                    Tools: Miro, Jira, Trello, Asana, Notion
+                    Creating Startups, Design Sprints, User Story Mapping, Release Planning, Agile
+                    Tools: Miro, Jira, Trello, Asana, Notion, YCombinator
                     `}
                   </TextSection>
                 </ViewSection>
