@@ -3,6 +3,7 @@ import React, { FC, ReactNode } from 'react'
 import {
   Document,
   Font,
+  Link,
   PDFViewer,
   Page,
   Text,
@@ -145,10 +146,27 @@ export const MyDocument = ({ t }) => {
                   Frontend Engineer
                 </Text>
                 <Text style={{ fontSize: 8 }}>
-                  indicozy@gmail.com | GitHub: indicozy
+                  <Link
+                    style={{ color: 'black', textDecoration: 'none' }}
+                    src='mailto:indicozy@gmail.com'
+                  >
+                    indicozy@gmail.com
+                  </Link>
+                  |{' '}
+                  <Link
+                    style={{ color: 'black', textDecoration: 'none' }}
+                    src='https://github.com/indicozy'
+                  >
+                    GitHub: indicozy
+                  </Link>
                 </Text>
-                <Text style={{ fontSize: 8, textDecoration: 'underline' }}>
-                  indicozy.vercel.app
+                <Text style={{ fontSize: 8 }}>
+                  <Link
+                    style={{ color: 'black', textDecoration: 'underline' }}
+                    src='https://indicozy.vercel.app'
+                  >
+                    indicozy.vercel.app
+                  </Link>
                 </Text>
               </View>
               <View
@@ -165,7 +183,7 @@ export const MyDocument = ({ t }) => {
               </View>
             </View>
             <View
-              style={{ display: 'flex', flexDirection: 'row', marginTop: 20 }}
+              style={{ display: 'flex', flexDirection: 'row', marginTop: 24 }}
             >
               <View
                 style={{
@@ -176,34 +194,102 @@ export const MyDocument = ({ t }) => {
                 }}
               >
                 <ViewSection sidebar='projects'>
-                  <TextSection>{`BeLearn (02.2023 - Present)
-                  op-onai.kz
+                  <TextSection>
+                    {`BeLearn (02.2023 - Present)
+`}
+
+                    <Link
+                      style={{
+                        color: 'black',
+                        textDecoration: 'underline',
+                        paddingBottom: 1
+                      }}
+                      src='https://op-onai.kz'
+                    >
+                      op-onai.kz
+                    </Link>
+                    {`
 
                   Social Network for Active Learners with Personal Recommendation System.
-                  Typescript, tRPC, Next, React, neo4j, Algolia, Vercel`}</TextSection>
+                  Typescript, tRPC, Next, React, neo4j, Algolia, Vercel`}
+                  </TextSection>
                   <Br />
-                  <TextSection>{`Op-onai (September 2022 - January 2023)
-                  old.op-onai.kz
+                  <TextSection>
+                    {`Op-onai (September 2022 - January 2023)
+`}
+                    <Link
+                      style={{
+                        color: 'black',
+                        textDecoration: 'underline',
+                        paddingBottom: 1
+                      }}
+                      src='https://old.op-onai.kz'
+                    >
+                      old.op-onai.kz
+                    </Link>
+
+                    {`
 
                   Live Collaborative Learning for IT Schools.
-                  Typescript, tRPC, Next, React, prismaORM, MongoDB, zustand, socket.io, Mantine, LevelDB`}</TextSection>
+                  Typescript, tRPC, Next, React, prismaORM, MongoDB, zustand, socket.io, Mantine, LevelDB`}
+                  </TextSection>
                   <Br />
-                  <TextSection>{`Personal Blog (January 2022 - Present)
-                  indicozy.vercel.app
+                  <TextSection>
+                    {`Personal Blog (January 2022 - Present)
+`}
+                    <Link
+                      style={{
+                        color: 'black',
+                        textDecoration: 'underline',
+                        paddingBottom: 1
+                      }}
+                      src='https://indicozy.vercel.app'
+                    >
+                      indicozy.vercel.app
+                    </Link>
+                    {`
 
                   My personal space for notes, activity and blog.
-                  NotionCMS, Next, React, Tailwind, Vercel, Typescript`}</TextSection>
+                  NotionCMS, Next, React, Tailwind, Vercel, Typescript`}
+                  </TextSection>
                   <Br />
-                  <TextSection>{`TinderBot (August 2022 - September 2022)
-                  github.com/indicozy/cbtb
+                  <TextSection>
+                    {`TinderBot (August 2022 - September 2022)
+`}
+                    <Link
+                      style={{
+                        color: 'black',
+                        textDecoration: 'underline',
+                        paddingBottom: 1
+                      }}
+                      src='https://github.com/indicozy/cbtb'
+                    >
+                      github.com/indicozy/cbtb
+                    </Link>
+                    {`
+
 
                   Ebay-like Marketplace and Tinder for University.
-                  800 users and 80,000KZT in sales in 1 week`}</TextSection>
+                  800 users and 80,000KZT in sales in 1 week`}
+                  </TextSection>
                   <Br />
-                  <TextSection>{`WMTM (January 2021 - February 2021 )
-                    github.com/indicozy/wmtm
+                  <TextSection>
+                    {`WMTM (January 2021 - February 2021 )
+`}
+                    <Link
+                      style={{
+                        color: 'black',
+                        textDecoration: 'underline',
+                        paddingBottom: 1
+                      }}
+                      src='https://github.com/indicozy/wmtm'
+                    >
+                      github.com/indicozy/wmtm
+                    </Link>
+                    {`
 
-                  WM-agnostic Theme Manager for Linux in Bash.`}</TextSection>
+                  WM-agnostic Theme Manager for Linux in Bash.`}
+                  </TextSection>
                 </ViewSection>
                 <ViewSection sidebar='experience'>
                   <TextSection>
@@ -221,7 +307,7 @@ export const MyDocument = ({ t }) => {
                   <TextSection>{`Mentorship (March 2021 - Present)
                   Personal Mentor
 
-                  Personally mentored about 50 students on programming basics, frontend, backend and devops.`}</TextSection>
+                  Personally mentored about 50 students on programming basics, frontend, backend and devops. 85% of them finished their projects and 60% found a job in IT.`}</TextSection>
                   <Br />
                   <TextSection>
                     {`QWANT (May 2021 - December 2021)
@@ -231,9 +317,8 @@ export const MyDocument = ({ t }) => {
                   </TextSection>
                   <Br />
                   <TextSection>
-                    {`Open-Source (December 2021 - Present)
-
-                    Contributed to Vercel, Prisma, Pupilfirst, DiceBear, Searchkit, Vanilla-OS, uiwjs, Mantine and Faker-JS.`}
+                    {`Freelancing (May 2020 - May 2021)
+                    Developer`}
                   </TextSection>
                 </ViewSection>
               </View>
@@ -276,18 +361,51 @@ export const MyDocument = ({ t }) => {
                     `}
                   </TextSection>
                 </ViewSection>
-                <ViewSection sidebar='soft skills'>
+                <ViewSection sidebar='open--source'>
                   <TextSection>
-                    {`The experience I have gained with the various roles I have had throughout my career has given me a very well-rounded range of soft skills. As a PM, I have led cross-functional teams of 10+ designers and engineers for a number of years. I have also worked as both a designer and engineer and have the ability to empathise with both disciplines as well as understand the more technical side of product delivery.
+                    {`VERCEL/NEXT.JS
+                    Example code for documentation
+`}
+                    <Link
+                      style={{
+                        color: 'black',
+                        textDecoration: 'underline',
+                        paddingBottom: 1
+                      }}
+                      src='https://github.com/vercel/next.js'
+                    >
+                      github.com/vercel/next.js
+                    </Link>
+                    {`
 
-                    -- Shape the vision and work towards a business or product
-- strategy while keeping solutions simple enough to ship quickly and iteratively
-- Use and understand data to back up my design solutions
-- Collaborate well with others cross-functionally
-- Know when to use low or high fidelity design methods
-- Share my work early and often and communicate effectively
-- Stay focused on the customer as the highest priority over my own opinions
-- Lead teams when needed and help to align teams on solutions or mission`}
+                    Updated example code for integration of NextJS with Headless Wordpress through GraphQL.`}
+                  </TextSection>
+                  <Br />
+                  <TextSection>
+                    {`PUPILFIRST/PUPILFIRST
+                    Internationalization (i18n), documentation,
+                    bug fixes, development
+`}
+                    <Link
+                      style={{
+                        color: 'black',
+                        textDecoration: 'underline',
+                        paddingBottom: 1
+                      }}
+                      src='https://github.com/pupilfirst/pupilfirst'
+                    >
+                      github.com/pupilfirst/pupilfirst
+                    </Link>
+                    {`
+
+                    Imporved internationalization (i18n) from ~10% to 100%. Added russian localization. Fixed bugs on Rescript and Ruby-on-Rails. Added markdown input and rendering for quiz questions.`}
+                  </TextSection>
+                  <Br />
+                  <TextSection>
+                    {`OTHERS
+                    Issues & Discussions
+
+                    Reported bugs, asked for feature requests and discussed in Prisma, DiceBear, Searchkit, Vanilla-OS, uiwjs, Mantine and Faker-JS.`}
                   </TextSection>
                 </ViewSection>
                 <ViewSection sidebar='education'>
