@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 
 import { IconMenu2 } from '@tabler/icons'
 import { navigation } from 'data/navigation'
 import { INote } from 'data/navigation'
-import { motion, useCycle } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useTranslation } from 'next-export-i18n'
 
 import { LanguageSwitcherMenu } from '../language-switcher-menu'
@@ -95,7 +95,7 @@ const variants = {
 
 export const Sidebar = ({ isRouterLoading }: { isRouterLoading: boolean }) => {
   const { t } = useTranslation()
-  const [isOpen, toggleOpen] = useCycle(false, true)
+  const [isOpen, toggleOpen] = useState(false)
 
   return (
     <motion.aside
@@ -105,11 +105,11 @@ export const Sidebar = ({ isRouterLoading }: { isRouterLoading: boolean }) => {
       className='hidden fixed top-0 left-0 z-10 justify-end items-center h-screen border-r sm:flex bg-background dark:bg-back_dark border-r-foreground dark:border-r-fore_dark transition-colors duration-300'
     >
       <div className='h-screen py-8 text-4xl mr-8 font-runs w-[11rem] ml-4'>
-        <Navigation toggle={() => toggleOpen()} />
+        <Navigation toggle={() => toggleOpen(false)} />
       </div>
       <div className='flex flex-col items-center h-screen justify-between py-8 w-8 px-10'>
         <div className='flex flex-col items-center'>
-          <button className='' onClick={() => toggleOpen()}>
+          <button className='' onClick={() => toggleOpen((isOpen) => !isOpen)}>
             <IconMenu2 size={30} stroke={1.2} />
           </button>
           <LanguageSwitcherMenu />
