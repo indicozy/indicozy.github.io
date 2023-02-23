@@ -34,24 +34,31 @@ const About: FC = () => {
       <h1 className='text-[8rem] font-runs font-normal hover:font-bold transition-all'>
         About Me
       </h1>
-      <div className='mb-4'>
-        <Suspense fallback={<div>Loading...</div>}>
-          <DynamicPdfDownloadLink t={t} />
-        </Suspense>
-      </div>
 
-      <Suspense fallback={<div>Loading...</div>}>
+      {/* <Suspense fallback={<div>Loading...</div>}>
         <DynamicPdf t={t} />
-      </Suspense>
-      <p>
-        I like many stuff: Photography, Cinematography, programming, FOSS,
-        designs, interior designs, mentoring, management, marketing, sales,
-        economics...
-      </p>
-      <p>
-        For now, I&apos;m developing a LMS for collaborative programming.
-        Whether I will succeed or you&apos;ll see in May 2023. See ya.
-      </p>
+      </Suspense> */}
+      <div>
+        <p>
+          I like many stuff: Photography, Cinematography, programming, FOSS,
+          designs, interior designs, mentoring, management, marketing, sales,
+          economics...
+        </p>
+        <p>
+          For now, I&apos;m developing a LMS for collaborative programming.
+          Whether I will succeed or you&apos;ll see in May 2023. See ya.
+        </p>
+      </div>
+      <div className='mt-12'>
+        <p className='text-6xl font-runs font-normal hover:font-bold transition-[font-weight]'>
+          Resume:
+        </p>
+        <div className='mt-4'>
+          <Suspense fallback={<div>Loading...</div>}>
+            <DynamicPdfDownloadLink t={t} />
+          </Suspense>
+        </div>
+      </div>
       <div className='mt-20'>
         <p className='text-6xl font-runs font-normal hover:font-bold transition-[font-weight]'>
           Contributed to:
