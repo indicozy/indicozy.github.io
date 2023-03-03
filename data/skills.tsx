@@ -87,10 +87,10 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
       },
       icon: <PaddingIcon />,
       skills: [
-        {
-          icon: <IconConverter icon={IconBrandKotlin} />,
-          value: 'Kotlin'
-        },
+        // {
+        //   icon: <IconConverter icon={IconBrandKotlin} />,
+        //   value: 'Kotlin'
+        // },
         {
           icon: <IconConverter icon={IconBrandJavascript} />,
           value: 'JavaScript'
@@ -107,18 +107,18 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
           icon: <IconConverter icon={IconBrandGoogle} />, // TODO
           value: 'Go'
         },
-        {
-          icon: <IconConverter icon={IconDiamond} />, // TODO
-          value: 'Ruby'
-        },
+        // {
+        //   icon: <IconConverter icon={IconDiamond} />, // TODO
+        //   value: 'Ruby'
+        // },
         {
           icon: <IconConverter icon={IconTerminal2} />, // TODO
           value: 'Bash'
-        },
-        {
-          icon: <IconConverter icon={IconFlask} />, // TODO
-          value: 'Elixir'
         }
+        // {
+        //   icon: <IconConverter icon={IconFlask} />, // TODO
+        //   value: 'Elixir'
+        // }
       ]
     },
     frontend: {
@@ -135,14 +135,14 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
           icon: <IconConverter icon={IconBrandNextjs} />,
           value: 'NextJS'
         },
-        {
-          icon: <IconConverter icon={IconBrandGatsby} />,
-          value: 'Gatsby'
-        },
-        {
-          icon: <IconConverter icon={IconLetterR} />,
-          value: 'Remix'
-        },
+        // {
+        //   icon: <IconConverter icon={IconBrandGatsby} />,
+        //   value: 'Gatsby'
+        // },
+        // {
+        //   icon: <IconConverter icon={IconLetterR} />,
+        //   value: 'Remix'
+        // },
         {
           icon: <IconConverter icon={IconBrandHtml5} />,
           value: 'HTML5'
@@ -158,6 +158,10 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
         {
           icon: <IconConverter icon={IconBrandRedux} />,
           value: 'Zustand'
+        },
+        {
+          icon: <IconConverter icon={IconLetterR} />,
+          value: 'Recoil'
         },
         {
           icon: <IconConverter icon={IconBrandReact} />, // TODO
@@ -358,10 +362,10 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
           icon: <IconConverter icon={IconBrandGithub} />, // TODO
           value: 'GitHub Actions'
         },
-        {
-          icon: <IconConverter icon={IconBrandAmazon} />, // TODO
-          value: 'AWS'
-        },
+        // {
+        //   icon: <IconConverter icon={IconBrandAmazon} />, // TODO
+        //   value: 'AWS'
+        // },
         {
           icon: <IconConverter icon={IconTruckDelivery} />, // TODO
           value: 'CI/CD'
@@ -485,14 +489,14 @@ const profileData: { skills: { [name: string]: TypeSkillSet } } = {
           icon: <IconConverter icon={IconBrandAdobe} />, // TODO
           value: 'Illustrator'
         },
-        {
-          icon: <IconConverter icon={IconLetterL} />, // TODO
-          value: 'Lunacy'
-        },
-        {
-          icon: <IconConverter icon={IconLetterD} />, // TODO
-          value: 'Design Systems'
-        },
+        // {
+        //   icon: <IconConverter icon={IconLetterL} />, // TODO
+        //   value: 'Lunacy'
+        // },
+        // {
+        //   icon: <IconConverter icon={IconLetterD} />, // TODO
+        //   value: 'Design Systems'
+        // },
         {
           icon: <IconConverter icon={IconLetterI} />, // TODO
           value: 'Inkscape'
