@@ -85,6 +85,7 @@ const Br: FC = () => (
 
 // Create Document Component
 export const MyDocument = ({ t }) => {
+  const prefix = `resume.frontend`
   return (
     <Document>
       <Page
@@ -143,7 +144,7 @@ export const MyDocument = ({ t }) => {
                     fontWeight: 500
                   }}
                 >
-                  Frontend Engineer
+                  {t(`${prefix}.title`)}
                 </Text>
                 <Text style={{ fontSize: 8 }}>
                   <Link
@@ -175,11 +176,7 @@ export const MyDocument = ({ t }) => {
                   flexGrow: 1
                 }}
               >
-                <Text style={{ fontSize: 10 }}>
-                  I am passionate about creating exceptional user experiences by
-                  working with team to develop simple, impactful, and shippable
-                  solutions focused on the customer.
-                </Text>
+                <Text style={{ fontSize: 10 }}>{t(`${prefix}.summary`)}</Text>
               </View>
             </View>
             <View
@@ -292,37 +289,32 @@ export const MyDocument = ({ t }) => {
                   </TextSection>
                 </ViewSection>
                 <ViewSection sidebar='experience'>
-                  <TextSection>
-                    {`JEZGRADS FOUNDATION (November 2019 - Present)
-                      Head of Digitization and Design
+                  {t(`${prefix}.experience`).map(
+                    (
+                      exp: {
+                        title: string
+                        date: string
+                        role: string
+                        description: string
+                      },
+                      i
+                    ) => (
+                      <>
+                        {i ? <Br /> : <></>}
+                        <TextSection key={i}>
+                          {`${exp.title} (${exp.date})
+                      ${exp.role}
 
-                      Raised 78 million tenge (~$180,000) for public funding, gathered 500 people into 6 events, collected information of every participant, developed website, WhatsApp bot, designed logo, instagram posts and merch.`}
-                  </TextSection>
-                  <Br />
+                      ${exp.description}`}
+                        </TextSection>
+                      </>
+                    )
+                  )}
                   {/* <TextSection>{`ACM CODEW (January 2022 - January 2022)
                   Frontend Developer, codew.kz
 
                   Designed and developed website for Code-Women, ACM Student Chapter. Gathered 200 leads for event.`}</TextSection> */}
 
-                  <TextSection>{`Databar.ai (December 2022 - February 2022)
-                  Frontend Developer
-
-                  Migrated React codebase to Next.js. Improved client performance, SEO, First Contentful Paint.`}</TextSection>
-                  <Br />
-                  <TextSection>{`MENTORSHIP (March 2021 - Present)
-                  Personal Mentor
-
-                  Personally mentored about 50 students on programming basics, frontend, backend and devops. 85% of them finished their projects and 60% found a job in IT.`}</TextSection>
-                  <Br />
-                  <TextSection>
-                    {`QWANT (May 2021 - December 2021)
-                    Marketing and Sales Manager
-
-                    As being responsible for all B2C sales, I have marketed and sold courses for 300 paying customers in 4 months. I developed telegram bot for marketing and sales funnel, which gathered 50 clients, developed website for sales, created design system for instagram posts, mentored web development and linux administration. `}
-                  </TextSection>
-                  <Br />
-                  <TextSection>{`ACM CODEW (January 2022 - January 2022)
-                  Frontend Developer, codew.kz`}</TextSection>
                   {/* <TextSection>
                     {`FREELANCING (May 2020 - May 2021)
                     Developer`}

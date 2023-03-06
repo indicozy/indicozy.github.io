@@ -18,6 +18,32 @@ skills:
 name: Burkit Karlibay
 resume:
   frontend:
+    title: 'Frontend Engineer'
+    summary: >
+      I am passionate about creating exceptional user experiences by
+      working with team to develop simple, impactful, and shippable
+      solutions focused on the customer.
+    experience:
+      - title: JEZGRADS FOUNDATION
+        date: November 2019 - Present
+        role: Head of Digitization and Design
+        description: Raised 78 million tenge (~$180,000) for public funding, gathered 500 people into 6 events, collected information of every participant, developed website, WhatsApp bot, designed logo, instagram posts and merch.
+      - title: DATABAR.AI
+        date: December 2021 - February 2022
+        role: Frontend Developer
+        description: Migrated React codebase to Next.js. Improved client performance, SEO, First Contentful Paint.
+      - title: MENTORSHIP
+        date: March 2021 - Present
+        role: Personal Mentor
+        description: Personally mentored about 50 students on programming basics, frontend, backend and devops. 85% of them finished their projects and 60% found a job in IT.
+      - title: QWANT
+        date: May 2021 - December 2021
+        role: Marketing and Sales Manager
+        description: As being responsible for all B2C sales, I have marketed and sold courses for 300 paying customers in 4 months. I developed telegram bot for marketing and sales funnel, which gathered 50 clients, developed website for sales, created design system for instagram posts, mentored web development and linux administration.
+      - title: ACM CODEW
+        date: January 2022
+        role: Frontend Developer
+        description: Designed and developed website for Code-Women, ACM Student Chapter. Gathered 200 leads for event.
     hard-skills:
       - headline: 'Frontend'
         level: 'Advanced'
