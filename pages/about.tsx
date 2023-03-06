@@ -1,3 +1,4 @@
+import { GetStaticProps, NextPage } from 'next'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { FC, Suspense } from 'react'
@@ -20,7 +21,20 @@ const DynamicPdfDownloadLink = dynamic(
   }
 )
 
-const About: FC = () => {
+interface iSSG {
+  nodeEnv: 'development' | 'preview' | 'production' | undefined
+}
+
+export const getStaticProps: GetStaticProps<iSSG> = async () => {
+  const nodeEnv = process.env.NODE_ENV as
+    | 'development'
+    | 'preview'
+    | 'production'
+    | undefined
+  return { props: { nodeEnv } }
+}
+
+const About: NextPage<iSSG> = ({ nodeEnv }) => {
   const { t } = useTranslation()
   return (
     <div className='pt-40 relative'>
@@ -35,9 +49,13 @@ const About: FC = () => {
         About Me
       </h1>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <DynamicPdf t={t} />
-      </Suspense>
+      {nodeEnv === 'development' ? (
+        <Suspense fallback={<div>Loading...</div>}>
+          <DynamicPdf t={t} />
+        </Suspense>
+      ) : (
+        <></>
+      )}
       <div>
         <p>
           I like many stuff: Photography, Cinematography, programming, FOSS,

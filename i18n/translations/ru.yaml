@@ -18,37 +18,79 @@ skills:
 name: Burkit Karlibay
 resume:
   frontend:
+    title: 'Frontend Engineer'
+    summary: >
+      Frontend engineer with 1+ year experience in React, Node.js, and NextJS. Committed to developing optimized, efficient, and innovative solutions for complex problems.
+    experience:
+      - title: DATABAR.AI
+        date: December 2021 - February 2022
+        role: Frontend Developer
+        description: Migrated React codebase to Next.js. Improved client performance, SEO, FCP.
+      - title: JEZGRADS FOUNDATION
+        date: November 2019 - Present
+        role: Head of Digitization and Design
+        description: Raised 78 million tenge (~$180,000) for public funding, gathered 500 people into 6 events, collected information of every participant, developed website, WhatsApp bot, designed logo, instagram posts and merch.
+      - title: QWANT
+        date: May 2021 - December 2021
+        role: Marketing and Sales Manager
+        description: As being responsible for B2C sales, I have marketed and sold courses for 300 paying customers in 4 months. I developed telegram bot which gathered 50 clients, website for sales, design system for instagram posts.
+      - title: MENTORSHIP
+        date: March 2021 - Present
+        role: Personal Mentor
+        description: Personally mentored about 50 students on programming basics, frontend, backend and devops.
+      - title: ACM CODEW
+        date: January 2022
+        role: Frontend Developer
+        description: Designed and developed website for Code-Women, ACM Student Chapter. Gathered 200 leads for event.
+    education:
+      - title: NAZARBAYEV UNIVERSITY
+        date: August 2018 - May 2023
+        role: BA Degree in Sociology
+        description: |
+          Human-Computer Interaction
+          Collaborative learning
+          Algorithms & Data Structures
+          ACM SIG: AI & ML, Web, CyberSec
+    opensource:
+      - title: VERCEL/NEXT.JS
+        role: Example code for documentation
+        link: github.com/vercel/next.js
+        description: Updated example code for integration of NextJS with Headless Wordpress through GraphQL.
+      - title: PUPILFIRST/PUPILFIRST
+        role: Internationalization (i18n), documentation, bug fixes, development
+        link: github.com/pupilfirst/pupilfirst
+        description: Imporved internationalization (i18n) from ~10% to 100%. Added russian localization. Fixed bugs on Rescript and Ruby-on-Rails. Added markdown input and rendering for quiz questions.
     hard-skills:
-      - headline: 'Frontend'
+      - title: 'Frontend'
         level: 'Advanced'
         skills: >
           React, Next, Typescript, Solid, Remix, Vite, Svelte,
           TailwindCSS, HeadlessUI, Framer Motion, Zustand,
-          Redux, Jotai, ReactQuery, Axios, Storybook, Vue
-      - headline: 'Backend'
+          Redux, MobX, Jotai, Recoil ReactQuery, Axios, Storybook
+      - title: 'Backend'
         level: 'Intermediate'
         skills: >
-          Python, Go, NodeJS, Elixir, Ruby, Rust, PrismaORM,
+          Python, Go, NodeJS, PrismaORM,
           Flask, Django, ExpressJS, Rails, Sinatra, Gin, Fiber
-      - headline: 'Devops'
+      - title: 'Devops'
         level: 'Intermediate'
         skills: >
           Linux, Nix/NixOS, Terraform, Bash, Ansible, Docker, CI/CD, Vercel, Grafana, Zabbix, AWS, Jenkins, Git
-      - headline: 'DATABASES & API'
+      - title: 'DATABASES & API'
         level: 'Intermediate'
         skills: >
           neo4j, LevelDB, MongoDB, PostgreSQL, Cassandra, ScyllaDB, Redis, ElasticSearch, tRPC, REST, GraphQL
-      - headline: 'LOW/HIGH FIDELITY DESIGN'
+      - title: 'LOW/HIGH FIDELITY DESIGN'
         level: 'Intermediate'
         skills: >
           Wireframing, Sketching, Ideation, User flows, Prototyping, Design specs, Design systems,
           Miro, Photoshop, Illustrator, Figma, Inkscape
-      - headline: 'USER/CUSTOMER EXPERIENCE'
+      - title: 'USER/CUSTOMER EXPERIENCE'
         level: 'Beginner'
         skills: >
           Creating Startups, Design Sprints, User Story Mapping, Release Planning, Agile
           Tools: Miro, Jira, Trello, Asana, Notion, YCombinator
-      - headline: 'PRODUCT/PROJECT MANAGEMENT'
+      - title: 'PRODUCT/PROJECT MANAGEMENT'
         level: 'Beginner'
         skills: >
           Creating Startups, Design Sprints, User Story Mapping, Release Planning, Agile
