@@ -143,7 +143,7 @@ export const MyDocument = ({ t }) => {
                     fontWeight: 500
                   }}
                 >
-                  Fullstack Engineer
+                  Frontend Engineer
                 </Text>
                 <Text style={{ fontSize: 8 }}>
                   <Link
