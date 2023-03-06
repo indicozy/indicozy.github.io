@@ -12,6 +12,5 @@ const i18n = {
   defaultLang: 'en',
   useBrowserDefault: true
 }
-console.log('bruh')
 
 module.exports = i18n

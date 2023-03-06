@@ -299,10 +299,15 @@ export const MyDocument = ({ t }) => {
                       Raised 78 million tenge (~$180,000) for public funding, gathered 500 people into 6 events, collected information of every participant, developed website, WhatsApp bot, designed logo, instagram posts and merch.`}
                   </TextSection>
                   <Br />
-                  <TextSection>{`ACM CODEW (January 2022 - January 2022)
+                  {/* <TextSection>{`ACM CODEW (January 2022 - January 2022)
                   Frontend Developer, codew.kz
 
-                  Designed and developed website for Code-Women, ACM Student Chapter. Gathered 200 leads for event.`}</TextSection>
+                  Designed and developed website for Code-Women, ACM Student Chapter. Gathered 200 leads for event.`}</TextSection> */}
+
+                  <TextSection>{`Databar.ai (December 2022 - February 2022)
+                  Frontend Developer
+
+                  Migrated React codebase to Next.js. Improved client performance, SEO, First Contentful Paint.`}</TextSection>
                   <Br />
                   <TextSection>{`MENTORSHIP (March 2021 - Present)
                   Personal Mentor
@@ -316,10 +321,12 @@ export const MyDocument = ({ t }) => {
                     As being responsible for all B2C sales, I have marketed and sold courses for 300 paying customers in 4 months. I developed telegram bot for marketing and sales funnel, which gathered 50 clients, developed website for sales, created design system for instagram posts, mentored web development and linux administration. `}
                   </TextSection>
                   <Br />
-                  <TextSection>
+                  <TextSection>{`ACM CODEW (January 2022 - January 2022)
+                  Frontend Developer, codew.kz`}</TextSection>
+                  {/* <TextSection>
                     {`FREELANCING (May 2020 - May 2021)
                     Developer`}
-                  </TextSection>
+                  </TextSection> */}
                 </ViewSection>
               </View>
 

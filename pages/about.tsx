@@ -35,9 +35,9 @@ const About: FC = () => {
         About Me
       </h1>
 
-      {/* <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Loading...</div>}>
         <DynamicPdf t={t} />
-      </Suspense> */}
+      </Suspense>
       <div>
         <p>
           I like many stuff: Photography, Cinematography, programming, FOSS,
