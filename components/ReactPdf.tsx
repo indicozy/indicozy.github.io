@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 
 import {
   Document,
@@ -143,7 +143,7 @@ export const MyDocument = ({ t }) => {
                     fontWeight: 500
                   }}
                 >
-                  Frontend Engineer
+                  Fullstack Engineer
                 </Text>
                 <Text style={{ fontSize: 8 }}>
                   <Link
