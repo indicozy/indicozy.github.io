@@ -10,8 +10,8 @@
     "node": ">=16"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "mkdir -p i18n/generated; for locale in en ru kz; do npx yaml2json \"i18n/translations/${locale}.yaml\" -p > i18n/generated/${locale}.json; echo \"i18n/translations/${locale}.yaml\"; done && next build",
+    "dev": "npm run localize && next dev",
+    "build": "npm run localize && next build",
     "localize": "mkdir -p i18n/generated; for locale in en ru kz; do npx yaml2json \"i18n/translations/${locale}.yaml\" -p > i18n/generated/${locale}.json; echo \"i18n/translations/${locale}.yaml\"; done",
     "start": "next start",
     "export": "next build && next export",

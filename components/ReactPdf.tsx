@@ -77,7 +77,7 @@ const ViewSection: FC<{ children: ReactNode; sidebar: string }> = ({
 const TextSection: FC<{ children: ReactNode }> = ({ children }) => {
   return <Text style={{ fontSize: 8, lineHeight: 1.15 }}>{children}</Text>
 }
-const Br: FC = () => (
+const Hr: FC = () => (
   <Text style={{ fontSize: 8, marginBottom: 2, marginTop: 2 }}>
     ------------------
   </Text>
@@ -210,7 +210,7 @@ export const MyDocument = ({ t }) => {
                   Social Network for Active Learners with Personal Recommendation System.
                   Typescript, tRPC, Next, React, neo4j, Algolia, Vercel`}
                   </TextSection>
-                  <Br />
+                  <Hr />
                   <TextSection>
                     {`OP-ONAI (September 2022 - January 2023)
 `}
@@ -230,7 +230,7 @@ export const MyDocument = ({ t }) => {
                   Live Collaborative Learning for IT Schools.
                   Typescript, tRPC, Next, React, prismaORM, MongoDB, zustand, socket.io, Mantine, LevelDB`}
                   </TextSection>
-                  <Br />
+                  <Hr />
                   <TextSection>
                     {`PERSONAL BLOG (January 2022 - Present)
 `}
@@ -249,7 +249,7 @@ export const MyDocument = ({ t }) => {
                   My personal space for notes, activity and blog.
                   NotionCMS, Next, React, Tailwind, Vercel, Typescript`}
                   </TextSection>
-                  <Br />
+                  <Hr />
                   <TextSection>
                     {`TINDERBOT (August 2022 - September 2022)
 `}
@@ -269,7 +269,7 @@ export const MyDocument = ({ t }) => {
                   Ebay-like Marketplace and Tinder for University.
                   800 users and 80,000KZT in sales in 1 week`}
                   </TextSection>
-                  <Br />
+                  <Hr />
                   <TextSection>
                     {`WMTM (January 2021 - February 2021 )
 `}
@@ -299,8 +299,9 @@ export const MyDocument = ({ t }) => {
                       },
                       i
                     ) => (
+                      // TODO ERROR?
                       <>
-                        {i ? <Br /> : <></>}
+                        {i ? <Hr /> : <></>}
                         <TextSection key={i}>
                           {`${exp.title} (${exp.date})
                       ${exp.role}
@@ -310,15 +311,6 @@ export const MyDocument = ({ t }) => {
                       </>
                     )
                   )}
-                  {/* <TextSection>{`ACM CODEW (January 2022 - January 2022)
-                  Frontend Developer, codew.kz
-
-                  Designed and developed website for Code-Women, ACM Student Chapter. Gathered 200 leads for event.`}</TextSection> */}
-
-                  {/* <TextSection>
-                    {`FREELANCING (May 2020 - May 2021)
-                    Developer`}
-                  </TextSection> */}
                 </ViewSection>
               </View>
 
@@ -331,98 +323,86 @@ export const MyDocument = ({ t }) => {
                 }}
               >
                 <ViewSection sidebar='hard skills'>
-                  <TextSection>
-                    {`FRONTEND (Advanced):
-                    React, Next, Typescript, Solid, Remix, Vite, Svelte,
-                    TailwindCSS, HeadlessUI, Framer Motion, Zustand,
-                    Redux, Jotai, ReactQuery, Axios, Storybook, Vue
+                  {t(`${prefix}.hard-skills`).map(
+                    (
+                      os: {
+                        title: string
+                        level: string
+                        skills: string
+                      },
+                      i
+                    ) => (
+                      // TODO no key
+                      <>
+                        {i ? <Hr /> : <></>}
+                        <TextSection>
+                          {`${os.title.toUpperCase()} (${os.level})
 
-                    BACKEND (Intermediate):
-                    Python, Go, NodeJS, Elixir, Ruby, Rust, PrismaORM,
-                    Flask, Django, ExpressJS, Rails, Sinatra, Gin, Fiber
-
-                    DEVOPS (Intermediate):
-                    Linux, Nix/NixOS, Terraform, Bash, Ansible, Docker, CI/CD, Vercel, Grafana, Zabbix, AWS, Jenkins, Git
-
-                    DATABASES & API (Intermediate):
-                    neo4j, LevelDB, MongoDB, PostgreSQL, Cassandra, ScyllaDB, Redis, ElasticSearch, tRPC, REST, GraphQL
-
-                    LOW/HIGH FIDELITY DESIGN (Intermediate):
-                    Wireframing, Sketching, Ideation, User flows, Prototyping, Design specs, Design systems,
-                    Miro, Photoshop, Illustrator, Figma, Inkscape
-
-                    USER/CUSTOMER EXPERIENCE (Beginner):
-                    User Research, Market Research, Usability Testing
-
-                    PRODUCT/PROJECT MANAGEMENT (Beginner)
-                    Creating Startups, Design Sprints, User Story Mapping, Release Planning, Agile
-                    Tools: Miro, Jira, Trello, Asana, Notion, YCombinator
-                    `}
-                  </TextSection>
+                            ${os.skills}`}
+                        </TextSection>
+                      </>
+                    )
+                  )}
                 </ViewSection>
                 <ViewSection sidebar='open--source'>
-                  <TextSection>
-                    {`VERCEL/NEXT.JS
-                    Example code for documentation
+                  {t(`${prefix}.opensource`).map(
+                    (
+                      os: {
+                        title: string
+                        role: string
+                        link: string
+                        description: string
+                      },
+                      i
+                    ) => (
+                      // TODO no key
+                      <>
+                        {i ? <Hr /> : <></>}
+                        <TextSection>
+                          {`${os.title}
+                            ${os.role}
 `}
-                    <Link
-                      style={{
-                        color: 'black',
-                        textDecoration: 'underline',
-                        paddingBottom: 1
-                      }}
-                      src='https://github.com/vercel/next.js'
-                    >
-                      github.com/vercel/next.js
-                    </Link>
-                    {`
+                          <Link
+                            style={{
+                              color: 'black',
+                              textDecoration: 'underline',
+                              paddingBottom: 1
+                            }}
+                            src={`https://${os.link}`}
+                          >
+                            {os.link}
+                          </Link>
+                          {`
 
-                    Updated example code for integration of NextJS with Headless Wordpress through GraphQL.`}
-                  </TextSection>
-                  <Br />
-                  <TextSection>
-                    {`PUPILFIRST/PUPILFIRST
-                    Internationalization (i18n), documentation,
-                    bug fixes, development
-`}
-                    <Link
-                      style={{
-                        color: 'black',
-                        textDecoration: 'underline',
-                        paddingBottom: 1
-                      }}
-                      src='https://github.com/pupilfirst/pupilfirst'
-                    >
-                      github.com/pupilfirst/pupilfirst
-                    </Link>
-                    {`
-
-                    Imporved internationalization (i18n) from ~10% to 100%. Added russian localization. Fixed bugs on Rescript and Ruby-on-Rails. Added markdown input and rendering for quiz questions.`}
-                  </TextSection>
-                  <Br />
-                  <TextSection>
-                    {`OTHERS
-                    Issues & Discussions
-
-                    Reported bugs, asked for feature requests and discussed in Prisma, DiceBear, Searchkit, Vanilla-OS, uiwjs, Mantine and Faker-JS.`}
-                  </TextSection>
+                            ${os.description}`}
+                        </TextSection>
+                      </>
+                    )
+                  )}
                 </ViewSection>
                 <ViewSection sidebar='education'>
-                  <TextSection>
-                    {`NAZARBAYEV UNIVERSITY (August 2018 - May 2023)
-                    BA Degree in Sociology
+                  {t(`${prefix}.education`).map(
+                    (
+                      os: {
+                        title: string
+                        role: string
+                        date: string
+                        description: string
+                      },
+                      i
+                    ) => (
+                      // TODO no key
+                      <>
+                        {i ? <Hr /> : <></>}
+                        <TextSection>
+                          {`${os.title} (${os.date})
+                            ${os.role}
 
-                    Human-Computer Interaction
-                    Collaborative learning`}
-                  </TextSection>
-                  <Br />
-                  <TextSection>
-                    {`JEZKAZGAN KAZAKH-TURKISH LYCEUM
-                    May 2018
-
-                    Photography & Cinematography
-                    C/C++, Python, Automation`}
-                  </TextSection>
+                            ${os.description}`}
+                        </TextSection>
+                      </>
+                    )
+                  )}
                 </ViewSection>
               </View>
             </View>
