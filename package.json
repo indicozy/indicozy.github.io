@@ -11,7 +11,8 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "mkdir -p i18n/generated; for locale in en ru kz; do npx yaml2json \"i18n/translations/${locale}.yaml\" -p > i18n/generated/${locale}.json; echo \"i18n/translations/${locale}.yaml\"; done && next build",
+    "localize": "mkdir -p i18n/generated; for locale in en ru kz; do npx yaml2json \"i18n/translations/${locale}.yaml\" -p > i18n/generated/${locale}.json; echo \"i18n/translations/${locale}.yaml\"; done",
     "start": "next start",
     "export": "next build && next export",
     "deploy": "vercel deploy",
@@ -58,7 +59,8 @@
     "react-notion-x": "^6.15.7",
     "react-tweet-embed": "^2.0.0",
     "react-use": "^17.4.0",
-    "rss": "^1.2.2"
+    "rss": "^1.2.2",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^13.0.7",

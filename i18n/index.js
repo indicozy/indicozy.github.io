@@ -1,6 +1,7 @@
-var en = require('./translations.en.json')
-var ru = require('./translations.ru.json')
-var kz = require('./translations.kz.json')
+/* eslint-disable @typescript-eslint/no-var-requires */
+var en = require('./generated/en.json')
+var ru = require('./generated/ru.json')
+var kz = require('./generated/kz.json')
 
 const i18n = {
   translations: {
@@ -11,5 +12,6 @@ const i18n = {
   defaultLang: 'en',
   useBrowserDefault: true
 }
+console.log('bruh')
 
 module.exports = i18n
