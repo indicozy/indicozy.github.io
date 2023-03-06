@@ -190,6 +190,30 @@ export const MyDocument = ({ t }) => {
                   marginRight: 10
                 }}
               >
+                <ViewSection sidebar='experience'>
+                  {t(`${prefix}.experience`).map(
+                    (
+                      exp: {
+                        title: string
+                        date: string
+                        role: string
+                        description: string
+                      },
+                      i
+                    ) => (
+                      // TODO ERROR?
+                      <>
+                        {i ? <Hr /> : <></>}
+                        <TextSection key={i}>
+                          {`${exp.title} (${exp.date})
+                      ${exp.role}
+
+                      ${exp.description}`}
+                        </TextSection>
+                      </>
+                    )
+                  )}
+                </ViewSection>
                 <ViewSection sidebar='projects'>
                   <TextSection>
                     {`BELEARN (02.2023 - Present)
@@ -287,30 +311,6 @@ export const MyDocument = ({ t }) => {
 
                   WM-agnostic Theme Manager for Linux in Bash.`}
                   </TextSection>
-                </ViewSection>
-                <ViewSection sidebar='experience'>
-                  {t(`${prefix}.experience`).map(
-                    (
-                      exp: {
-                        title: string
-                        date: string
-                        role: string
-                        description: string
-                      },
-                      i
-                    ) => (
-                      // TODO ERROR?
-                      <>
-                        {i ? <Hr /> : <></>}
-                        <TextSection key={i}>
-                          {`${exp.title} (${exp.date})
-                      ${exp.role}
-
-                      ${exp.description}`}
-                        </TextSection>
-                      </>
-                    )
-                  )}
                 </ViewSection>
               </View>
 
