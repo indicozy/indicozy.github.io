@@ -33,8 +33,8 @@ export default function NotionDomainPage() {
             </p>
             <p>
               <Span>
-                Currently learning Machine Learning, Graph-based Databases,
-                ElasticSearch, Algolia and Management
+                Currently learning business development, logistics and
+                networking
               </Span>
             </p>
           </div>
