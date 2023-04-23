@@ -164,9 +164,9 @@ export const MyDocument = ({ t }) => {
                 <Text style={{ fontSize: 8 }}>
                   <Link
                     style={{ color: 'black', textDecoration: 'underline' }}
-                    src='https://indicozy.vercel.app'
+                    src='https://indicozy.com'
                   >
-                    indicozy.vercel.app
+                    indicozy.com
                   </Link>
                 </Text>
               </View>
@@ -225,14 +225,14 @@ export const MyDocument = ({ t }) => {
                         textDecoration: 'underline',
                         paddingBottom: 1
                       }}
-                      src='https://op-onai.kz'
+                      src='https://belearn.app'
                     >
-                      op-onai.kz
+                      belearn.app
                     </Link>
                     {`
 
-                  Social Network for Active Learners with Personal Recommendation System.
-                  Typescript, tRPC, Next, React, neo4j, Algolia, Vercel`}
+                  Productivity platform for self learners with AI recommendation system.
+                  Typescript, tRPC, Next, CockroachDB, Algolia, Vercel`}
                   </TextSection>
                   <Hr />
                   <TextSection>
@@ -244,9 +244,9 @@ export const MyDocument = ({ t }) => {
                         textDecoration: 'underline',
                         paddingBottom: 1
                       }}
-                      src='https://old.op-onai.kz'
+                      src='https://op-onai.kz'
                     >
-                      old.op-onai.kz
+                      op-onai.kz
                     </Link>
 
                     {`
@@ -264,16 +264,17 @@ export const MyDocument = ({ t }) => {
                         textDecoration: 'underline',
                         paddingBottom: 1
                       }}
-                      src='https://indicozy.vercel.app'
+                      src='https://indicozy.com'
                     >
-                      indicozy.vercel.app
+                      indicozy.com
                     </Link>
                     {`
 
                   My personal space for notes, activity and blog.
-                  NotionCMS, Next, React, Tailwind, Vercel, Typescript`}
+                  NotionCMS, Next, React, Tailwind, Vercel, Typescript.
+                  (about to rebuild on Astro + Svelte)`}
                   </TextSection>
-                  <Hr />
+                  {/* <Hr />
                   <TextSection>
                     {`TINDERBOT (August 2022 - September 2022)
 `}
@@ -292,9 +293,9 @@ export const MyDocument = ({ t }) => {
 
                   Ebay-like Marketplace and Tinder for University.
                   800 users and 80,000KZT in sales in 1 week`}
-                  </TextSection>
-                  <Hr />
-                  <TextSection>
+                  </TextSection> */}
+                  {/* <Hr /> */}
+                  {/* <TextSection>
                     {`WMTM (January 2021 - February 2021 )
 `}
                     <Link
@@ -310,7 +311,7 @@ export const MyDocument = ({ t }) => {
                     {`
 
                   WM-agnostic Theme Manager for Linux in Bash.`}
-                  </TextSection>
+                  </TextSection> */}
                 </ViewSection>
               </View>
 

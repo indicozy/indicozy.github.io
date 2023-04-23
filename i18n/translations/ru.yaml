@@ -21,8 +21,12 @@ resume:
   frontend:
     title: 'Frontend Engineer'
     summary: >
-      Frontend engineer with 1+ year experience in React, Node.js, and NextJS. Committed to developing optimized, efficient, and innovative solutions for complex problems.
+      Frontend engineer with 1+ year experience in React, Node.js, and NextJS. Committed to developing simple, efficient, and innovative solutions for complex problems.
     experience:
+      - title: EcoDeliveryKZ
+        date: March 2023 - April 2023
+        role: Fullstack Developer
+        description: Developed logistics automation system from scratch. Added automation of requests, delivery, warehouse sorting and integration with 1C. Warehouse input/output works with FIFO algorithm.
       - title: DATABAR.AI
         date: December 2021 - February 2022
         role: Frontend Developer
@@ -39,10 +43,6 @@ resume:
         date: March 2021 - Present
         role: Personal Mentor
         description: Personally mentored about 50 students on programming basics, frontend, backend and devops.
-      - title: ACM CODEW
-        date: January 2022
-        role: Frontend Developer
-        description: Designed and developed website for Code-Women, ACM Student Chapter. Gathered 200 leads for event.
     education:
       - title: NAZARBAYEV UNIVERSITY
         date: August 2018 - May 2023
@@ -65,13 +65,13 @@ resume:
       - title: 'Frontend'
         level: 'Advanced'
         skills: >
-          React, Next, Typescript, Solid, Remix, Vite, Svelte,
-          TailwindCSS, HeadlessUI, Framer Motion, Zustand,
-          Redux, MobX, Jotai, Recoil ReactQuery, Axios, Storybook
+          React, Next, Typescript, Solid, Astro, Vite, Svelte,
+          TailwindCSS, RadixUI, CVA, Framer Motion, Zustand,
+          Redux, MobX, Jotai, Recoil, ReactQuery, Axios, Storybook
       - title: 'Backend'
         level: 'Intermediate'
         skills: >
-          Python, Go, NodeJS, PrismaORM,
+          NodeJS, Python, Go, PrismaORM, SQL,
           Flask, Django, ExpressJS, Rails, Sinatra, Gin, Fiber
       - title: 'Devops'
         level: 'Intermediate'
@@ -80,7 +80,7 @@ resume:
       - title: 'DATABASES & API'
         level: 'Intermediate'
         skills: >
-          neo4j, LevelDB, MongoDB, PostgreSQL, Cassandra, ScyllaDB, Redis, ElasticSearch, tRPC, REST, GraphQL
+          PostgreSQL, neo4j, LevelDB, MongoDB, ScyllaDB, Redis, ElasticSearch, tRPC, REST, GraphQL
       - title: 'LOW/HIGH FIDELITY DESIGN'
         level: 'Intermediate'
         skills: >

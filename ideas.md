@@ -1,1 +1,1 @@
-- [ ] Image preview not working
+- [x] Notion Image preview not working
