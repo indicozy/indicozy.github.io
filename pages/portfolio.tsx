@@ -277,12 +277,16 @@ const Works: FC = () => {
           </div>
           <div className='my-4'>{work.description}</div>
           <div className='mt-2'>
-            <a
-              className='px-6 py-2 border border-zinc-300 dark:border-zinc-500 rounded-lg bg-zinc-50 dark:bg-zinc-700'
-              href={work.link}
-            >
-              Link
-            </a>
+            {work.link ? (
+              <a
+                className='px-6 py-2 border border-zinc-300 dark:border-zinc-500 rounded-lg bg-zinc-50 dark:bg-zinc-700'
+                href={work.link}
+              >
+                Link
+              </a>
+            ) : (
+              <>No link, solution is internal only</>
+            )}
           </div>
         </div>
       </div>
