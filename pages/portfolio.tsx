@@ -9,13 +9,70 @@ interface iWork {
   description: string
   image?: string
   alt?: string
-  status: 'deprecated' | 'active' | 'in progress'
+  status: 'deprecated' | 'active' | 'in progress' | 'finished'
   link?: string
   technologies: string[]
 }
 
 const Works: FC = () => {
   const works: iWork[] = [
+    {
+      name: 'ESD - Ecommerce for Web security.',
+      date: 'May 2023 - Ongoing',
+      description: 'Ecommerce, CRM and CMS for web security',
+      status: 'in progress',
+      technologies: ['TailwindCSS', 'React', 'NextJS', 'zustand', 'MantineUI'],
+      image: '/portfolio/esd.png'
+    },
+    {
+      name: 'Ecommerce for wholesale',
+      date: 'May 2023 - Ongoing',
+      description: 'Ecommerce, CRM and CMS for wholesale',
+      status: 'in progress',
+      technologies: ['TailwindCSS', 'React', 'NextJS', 'zustand', 'MantineUI'],
+      image: '/portfolio/ecommerce.png'
+    },
+    {
+      name: 'AutotechIQ - Frontend',
+      date: 'January 2023 - March 2023',
+      description: 'Frontend for Static site generation.',
+      status: 'finished',
+      link: 'https://www.autotechiq.com/',
+      technologies: ['TailwindCSS', 'Svelte'],
+      image: '/portfolio/autotechiq.png'
+    },
+    {
+      name: 'EcoDeliveryKZ - Logistics & Warehouse management system',
+      date: 'March 2023 - May 2023',
+      description:
+        'Logistics and warehouse management system for FMCG products. Integrated with 1C, prediction models for warehouses and automatic sorting of items to be shipped.',
+      status: 'finished',
+      technologies: [
+        'PostgreSQL',
+        'LiveBlocks',
+        'Websockets',
+        'NextJS',
+        'Typescript',
+        'React',
+        'Javascript',
+        'LevelDB',
+        'Docker',
+        'Zustand',
+        'MantineUI',
+        'axios',
+        'formik',
+        'prismaORM'
+      ]
+    },
+    {
+      name: 'QService',
+      date: 'March 2023 - May 2023',
+      description: 'Support Ticket system and lending',
+      status: 'finished',
+      link: 'https://qservice.kz/',
+      technologies: ['TailwindCSS', 'React', 'NextJS'],
+      image: '/portfolio/qservice.png'
+    },
     {
       name: 'Op-onai - LMS for collaborative coding',
       date: 'August 2022 - December 2022 (pivot) - January 2023',
@@ -42,20 +99,6 @@ const Works: FC = () => {
         'prismaORM'
       ],
       image: '/portfolio/op-onai.png'
-    },
-    {
-      name: 'YouTube Channel',
-      date: 'August 2022 - September 2022',
-      description:
-        '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
-      status: 'deprecated',
-      link: 'https://github.com/indicozy/cbtb',
-      technologies: [
-        'Python',
-        'python-telegram-bot',
-        'SQLAlchemy',
-        'PostgreSQL'
-      ]
     },
     {
       name: 'Personal blog',
@@ -114,20 +157,6 @@ const Works: FC = () => {
       ]
     },
     {
-      name: 'T-shirt design for JezGrads',
-      date: 'August 2022 - September 2022',
-      description:
-        '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
-      status: 'deprecated',
-      link: 'https://github.com/indicozy/cbtb',
-      technologies: [
-        'Python',
-        'python-telegram-bot',
-        'SQLAlchemy',
-        'PostgreSQL'
-      ]
-    },
-    {
       name: 'CodeW Website',
       date: 'August 2022 - September 2022',
       description:
@@ -157,20 +186,6 @@ const Works: FC = () => {
     },
     {
       name: 'Qosylike - video conferencing for parties',
-      date: 'August 2022 - September 2022',
-      description:
-        '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
-      status: 'deprecated',
-      link: 'https://github.com/indicozy/cbtb',
-      technologies: [
-        'Python',
-        'python-telegram-bot',
-        'SQLAlchemy',
-        'PostgreSQL'
-      ]
-    },
-    {
-      name: 'Libero Project',
       date: 'August 2022 - September 2022',
       description:
         '1. Kaspi Shop-like marketplace for students to buy and sell their products and services. 2. Tinder-like app for matching. Made sales for 80,000KZT in 2 weeks and got 800 Users in one month. Deprecation reason: no profit',
