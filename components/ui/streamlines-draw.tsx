@@ -30,7 +30,7 @@ export const Streamlines = () => {
     // 👇️ use document.getElementById()
     const canvas = ref.current
     const ctx = canvas.getContext('2d')
-    console.log(f)
+    // console.log(f)
 
     let sizeMultiplier = 1
     if (size.width < 720) {
